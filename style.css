@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,9 +13,8 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background-color: brown;
-    color: white;
-    z-index: 92;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    color: black;
 }
 #nav{
     padding: 30px;
@@ -25,6 +24,7 @@ header{
 .header-links{
     display: flex; 
     margin-top: 5px;
+    
 }
 .side-header-head{
     display: none;
@@ -32,7 +32,7 @@ header{
 .header-links-inside a{
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: black;
     margin-right: 20px;
 }
 .header-links-inside a:hover{
@@ -43,13 +43,42 @@ header{
     display: none;    
     margin-top: 5px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 /* header session end */
 
 /* side nav header */
 #side-nav-bar{
-    z-index: 100;
+    background-color: #141920;
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: -50%;
+    transition: 2s;
+}
+.side-nav-closebar{
+    text-align: right;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.sidenav-links{
+    margin-left: 55px;
+    margin-top: 40px;
+}
+.sidenav-links-inside a{
+    text-decoration: none;
+    color: white;
+}
+.sidenav-links-inside{
+    margin-bottom: 30px;
+}
+.sidenav-links-inside a:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {

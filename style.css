@@ -2,13 +2,24 @@
     margin: 0;
     padding: 0;
 }
-#Header-file{
-    display: flex;
-    justify-content: space-between;
+body{
+    background-color: antiquewhite;
+    overflow-x: hidden;
+}
+/* header session */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: brown;
     color: white;
-    z-index: 99;
+    z-index: 92;
+}
+#nav{
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 .header-links{
     display: flex; 
@@ -22,4 +33,23 @@
 .header-links-inside a:hover{
     text-decoration: underline;
     color: orangered;
+}
+.menu-bar-opentag{
+    display: block;
+}
+
+/* header session end */
+
+/* side nav header */
+#side-nav-bar{
+    z-index: 100;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-bar-opentag{
+        display: block;
+    }
+    .header-links{
+        display: none;
+    }
 }

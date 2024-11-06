@@ -5,6 +5,7 @@
 body{
     background-color: antiquewhite;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* header session */
 header{
@@ -23,6 +24,10 @@ header{
 }
 .header-links{
     display: flex; 
+    margin-top: 5px;
+}
+.side-header-head{
+    display: none;
 }
 .header-links-inside a{
     text-decoration: none;
@@ -35,7 +40,9 @@ header{
     color: orangered;
 }
 .menu-bar-opentag{
-    display: block;
+    display: none;    
+    margin-top: 5px;
+    font-size: 30px;
 }
 
 /* header session end */
@@ -49,7 +56,12 @@ header{
     .menu-bar-opentag{
         display: block;
     }
+    .header-head,
     .header-links{
         display: none;
     }
+    .side-header-head{
+        display: block;
+    }
+    
 }

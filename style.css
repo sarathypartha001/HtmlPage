@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#Header-file{
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    color: white;
+    z-index: 99;
+    padding: 30px;
+}
+.header-links{
+    display: flex; 
+}
+.header-links-inside a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+}
+.header-links-inside a:hover{
+    text-decoration: underline;
+    color: orangered;
+}

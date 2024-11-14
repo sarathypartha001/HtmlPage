@@ -9,7 +9,6 @@ body{
 }
 /* header session */
 header{
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -65,7 +64,7 @@ header{
     height: 50%;
     position: fixed;
     top: -50%;
-    transition: 2s;
+    transition: 1s;
 }
 .side-nav-closebar{
     text-align: right;
@@ -93,15 +92,97 @@ header{
     color: red;
     text-decoration: underline;
 }
+/* home session start */
 #home-session{
-    margin-top: 400px;
+    width: 88%;
+    height: 400px;
+    margin: 100px 60px 100px 60px;
+    background-color: #c0c0c0;
+    padding: 20px;
+}
+.home-image{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    margin-top: 27px;
+}
+.home-session-inside{
+    display: flex;
+    justify-content: space-around;
+}
+.home-heading{
+    margin-top: 70px;
+}
+.home-head{
+    margin-bottom: 25px;
+    color: red;
+}
+.home-para{
+    margin-bottom: 80px;
+
+}
+.home-input-email{
+    width: 330px;
+    padding: 12px;
+    border-radius: 12px;
+}
+.home-button
+{
+    cursor: pointer;
+    width: 130px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: red;
+    font-size: medium;
+    margin-left: -50px;
 }
 
-@media screen and (max-width: 600px) {
+/* home session end */
+
+@media screen and (max-width: 500px) {
     .menu-bar-opentag{
         display: block;
     }
     .header-links{
         display: none;
     }    
+    /* home session */
+    #home-session{
+    width: 80%;
+    height: 350px;
+    margin: 80px 20px 80px 20px;
+    background-color: #c0c0c0;
+    padding: 15px;
+    overflow-x: hidden;
+}
+.home-image{
+    display: none;
+}
+.home-heading{
+    margin-top: 70px;
+    font-size: small;
+}
+.home-head{
+    margin-bottom: 25px;
+    color: red;
+}
+.home-para{
+    margin-bottom: 80px;
+
+}
+.home-input-email{
+    width: 180px;
+    padding: 8px;
+    border-radius: 12px;
+}
+.home-button
+{
+    cursor: pointer;
+    width: 100px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: red;
+    font-size: small;
+
+}
 }

@@ -46,7 +46,16 @@ header{
 .menu-bar-opentag:hover{
     color: red;
 }
-
+.header-head a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    word-spacing: -0.3rem;
+}
+.header-head a:hover{
+    color: red;
+    
+}
 /* header session end */
 
 /* side nav header */
@@ -83,6 +92,9 @@ header{
 .sidenav-links-inside a:hover{
     color: red;
     text-decoration: underline;
+}
+#home-session{
+    margin-top: 400px;
 }
 
 @media screen and (max-width: 600px) {

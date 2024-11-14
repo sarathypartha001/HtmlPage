@@ -145,7 +145,8 @@ header{
 
 /* home session end */
 
-@media screen and (max-width: 500px) {
+/* mobile mode  */
+@media screen and (max-width: 600px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -183,4 +184,17 @@ header{
       padding: 8px;
       font-size: small;
     }
+}
+/* tab mode */
+@media (min-width:600px) and (max-width:1000px) {
+    #home-session{
+        width: 80%;
+        height: 700px;
+        margin-left: 20px;
+        padding-left: 80px;
+    }
+    .home-session-inside{
+        display: inline;
+    }
+    
 }

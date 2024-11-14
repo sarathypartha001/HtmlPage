@@ -142,8 +142,32 @@ header{
    background-color: blue;
    color: black;
 }
-
+/* blog home session */
+#home-blog-session{
+    width: 88%;
+    height: 800px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    background-color: #c0c0c0;
+    padding: 20px;
+}
+.blog-para{
+    margin-top: 13px;
+    font-size: small;
+}
+.para1-head{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: orangered;
+}
+.para-subheading{
+    color:#c60a81;
+}
+/* blog home session end */
 /* home session end */
+
+
 /* post images */
 .post-img{
     width: 300px;
@@ -190,6 +214,12 @@ header{
       padding: 8px;
       font-size: small;
     }
+    #home-blog-session{
+        width: 80%;
+        height: 1600px;
+        margin-left: 20px;
+        padding: 15px;
+    }
 }
 /* tab mode */
 @media (min-width:600px) and (max-width:1000px) {
@@ -201,6 +231,13 @@ header{
     }
     .home-session-inside{
         display: inline;
+    }
+      #home-blog-session{
+      width: 85%;
+      height: 1000px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      margin-left: 30px;
     }
     
 }

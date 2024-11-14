@@ -144,6 +144,12 @@ header{
 }
 
 /* home session end */
+/* post images */
+.post-img{
+    width: 300px;
+    height: 300px;
+}
+/* post images end */
 
 /* mobile mode  */
 @media screen and (max-width: 600px) {

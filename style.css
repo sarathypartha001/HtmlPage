@@ -145,7 +145,7 @@ header{
 /* blog home session */
 #home-blog-session{
     width: 88%;
-    height: 800px;
+    height: 650px;
     margin-top: 60px;
     margin-bottom: 80px;
     margin-left: 50px;
@@ -216,7 +216,7 @@ header{
     }
     #home-blog-session{
         width: 80%;
-        height: 1600px;
+        height: 1160px;
         margin-left: 20px;
         padding: 15px;
     }
@@ -234,7 +234,7 @@ header{
     }
       #home-blog-session{
       width: 85%;
-      height: 1000px;
+      height: 820px;
       margin-top: 60px;
       margin-bottom: 60px;
       margin-left: 30px;

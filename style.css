@@ -125,16 +125,22 @@ header{
     width: 330px;
     padding: 12px;
     border-radius: 12px;
+    border: 1px solid black;
 }
 .home-button
 {
+
     cursor: pointer;
     width: 130px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 12px;
     background-color: red;
-    font-size: medium;
-    margin-left: -50px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+.home-button:hover{
+   background-color: blue;
+   color: black;
 }
 
 /* home session end */
@@ -148,41 +154,33 @@ header{
     }    
     /* home session */
     #home-session{
-    width: 80%;
-    height: 350px;
-    margin: 80px 20px 80px 20px;
-    background-color: #c0c0c0;
-    padding: 15px;
-    overflow-x: hidden;
-}
-.home-image{
-    display: none;
-}
-.home-heading{
-    margin-top: 70px;
-    font-size: small;
-}
-.home-head{
-    margin-bottom: 25px;
-    color: red;
-}
-.home-para{
-    margin-bottom: 80px;
-
-}
-.home-input-email{
-    width: 180px;
-    padding: 8px;
-    border-radius: 12px;
-}
-.home-button
-{
-    cursor: pointer;
-    width: 100px;
-    padding: 8px;
-    border-radius: 12px;
-    background-color: red;
-    font-size: small;
-
-}
+      width: 80%;
+      height: 350px;
+      margin: 80px 20px 80px 20px;
+      background-color: #c0c0c0;
+      padding: 15px;
+      overflow-x: hidden;
+    }
+    .home-image{
+      display: none;
+    }
+    .home-heading{
+      margin-top: 70px;
+      font-size: small;
+    }
+    .home-para{
+      margin-bottom: 40px;
+    }
+    .home-input-email{
+      width: 180px;
+      padding: 8px;
+      border-radius: 12px;
+    }
+    .home-button
+    {
+      margin-top: 20px;
+      border: none;
+      padding: 8px;
+      font-size: small;
+    }
 }

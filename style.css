@@ -265,7 +265,7 @@ header{
         font-size: x-small;
     }
     .post-img{
-        width: 110px;
+        width: 80px;
     }
 }
 /* tab mode */
@@ -285,6 +285,20 @@ header{
       margin-top: 60px;
       margin-bottom: 60px;
       margin-left: 30px;
+    }
+    .post-session-inside{
+        width: 160px;
+        padding: 25px;
+        margin: 15px;
+    }
+    .post-session{
+       margin: 15px;
+    }
+    .post-imge-main{
+        font-size: medium;
+    }
+    .post-img{
+        width: 130px;
     }
     
 }

@@ -254,7 +254,7 @@ header{
         padding: 15px;
     }
     .post-session-inside{
-        width: 180px;
+        width: 100px;
         padding: 25px;
         margin: 10px;
     }
@@ -265,7 +265,7 @@ header{
         font-size: x-small;
     }
     .post-img{
-        width: 130px;
+        width: 110px;
     }
 }
 /* tab mode */

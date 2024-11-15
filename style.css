@@ -169,10 +169,43 @@ header{
 
 
 /* post images */
-.post-img{
-    width: 300px;
-    height: 300px;
+.post-session{
+    text-align: center;
+    margin: 30px;
 }
+.post-session-inside{
+    border: 1px solid #141920;
+    display: inline-block;
+    width: 280px;
+    padding: 35px;
+    margin: 30px;
+    cursor: pointer;
+}
+.post-session-inside:hover{
+    border: 1px solid red;
+}
+.post-imge-main{
+    font-size: medium;
+}
+.readmore-link a{
+    color: #c60a81;
+    text-decoration: none;
+    cursor: pointer;
+}
+.readmore-link a:hover{
+    color: rgb(42, 9, 187);
+    text-decoration: underline;
+}
+.post-img:hover{
+    transform: scale(1.2);
+    overflow: hidden;
+}
+.post-img{
+    transition: 0.2s;
+    
+}
+
+
 /* post images end */
 
 /* mobile mode  */
@@ -219,6 +252,20 @@ header{
         height: 1160px;
         margin-left: 20px;
         padding: 15px;
+    }
+    .post-session-inside{
+        width: 180px;
+        padding: 25px;
+        margin: 10px;
+    }
+    .post-session{
+       margin: 15px;
+    }
+    .post-imge-main{
+        font-size: x-small;
+    }
+    .post-img{
+        width: 130px;
     }
 }
 /* tab mode */

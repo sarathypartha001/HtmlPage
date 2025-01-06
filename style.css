@@ -288,7 +288,7 @@ footer{
 /* footer end */
 
 /* mobile mode  */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -324,7 +324,7 @@ footer{
     
 }
 /* tab mode */
-@media (min-width:300px) and (max-width:900px) {
+@media (min-width:451px) and (max-width:900px) {
     .menu-bar-opentag{
         display: block;
     }

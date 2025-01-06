@@ -169,6 +169,25 @@ header{
    border: none;
    
 }
+.contact-information{
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:50px;
+}
+.contact-head{
+    color: rgb(11, 254, 43);
+}
+.contact-link{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.contact-map {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
 /* mobile mode  */
 @media screen and (max-width: 400px) {
@@ -181,6 +200,18 @@ header{
     .header-head-contact{
         display: none;
     }
+    .contact-information{
+        margin-top: -15px;
+        display: inline;
+        margin-bottom:50px;
+    }
+    .contact-map iframe{
+        width: 250px;
+        height: 250px;
+        margin: 50px;
+        border: none;
+    }
+    
     
 }
 /* tab mode */

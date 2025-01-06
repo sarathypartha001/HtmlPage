@@ -5,15 +5,16 @@
 body{
     background-color: whitesmoke;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 /* header session */
 header{
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: fixed;
     color: black;
+    background-color: azure;
 }
 #nav{
     padding: 30px;
@@ -46,6 +47,12 @@ header{
     color: red;
 }
 .header-head a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    word-spacing: -0.3rem;
+}
+.header-head-contact a{
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -92,213 +99,99 @@ header{
     color: red;
     text-decoration: underline;
 }
-/* home session start */
-#home-session{
-    width: 88%;
-    height: 400px;
-    margin: 100px 60px 100px 60px;
-    background-color: #c0c0c0;
-    padding: 20px;
-}
+/* Home session */
 .home-image{
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
-    margin-top: 27px;
+    background-image: url("images/backgroundimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85vh;
 }
-.home-session-inside{
-    display: flex;
-    justify-content: space-around;
-}
-.home-heading{
-    margin-top: 70px;
-}
-.home-head{
-    margin-bottom: 25px;
-    color: red;
-}
-.home-para{
-    margin-bottom: 80px;
-
-}
-.home-input-email{
-    width: 330px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid black;
-}
-.home-button
-{
-
-    cursor: pointer;
-    width: 130px;
-    padding: 10px;
-    border-radius: 12px;
-    background-color: red;
+.home-btn{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding: 10px 30px;
+    background-color: #65636363;
+    border: 1px solid rgb(11, 1, 1);
+    border-radius: 50px;
     font-size: 18px;
-    border: 1px solid black;
 }
-.home-button:hover{
-   background-color: blue;
-   color: black;
-}
-/* blog home session */
-#home-blog-session{
-    width: 88%;
-    height: 650px;
-    margin-top: 60px;
-    margin-bottom: 80px;
-    margin-left: 50px;
-    background-color: #c0c0c0;
-    padding: 20px;
-}
-.blog-para{
-    margin-top: 13px;
-    font-size: small;
-}
-.para1-head{
-    margin-bottom: 5px;
-    font-size: 15px;
-    color: orangered;
-}
-.para-subheading{
-    color:#c60a81;
-}
-/* blog home session end */
-/* home session end */
-
-
-/* post images */
-.post-session{
-    text-align: center;
-    margin: 30px;
-}
-.post-session-inside{
-    border: 1px solid #141920;
-    display: inline-block;
-    width: 280px;
-    padding: 35px;
-    margin: 30px;
-    cursor: pointer;
-}
-.post-session-inside:hover{
-    border: 1px solid red;
-}
-.post-imge-main{
-    font-size: medium;
-}
-.readmore-link a{
-    color: #c60a81;
+.home-btn a{
+    color: black;
     text-decoration: none;
-    cursor: pointer;
 }
-.readmore-link a:hover{
-    color: rgb(42, 9, 187);
-    text-decoration: underline;
+
+/* Home session end */
+
+/*Contact section*/
+.contact-details{
+    margin-top: 12%;
+    text-align: center;
 }
-.post-img:hover{
-    transform: scale(1.2);
-    overflow: hidden;
+.Contact{
+    background-color: #1D232C;
+    color: white;
+    margin: 5%;
+    margin-top: 9%;
+    padding-top: 20px;
 }
-.post-img{
-    transition: 0.2s;
-    
+
+.contact ,.Contact-box{
+   padding: 1% 5%;
 }
 
 
-/* post images end */
+.contact-box ,input{
+   padding: 11px;
+   width:75vw;
+   margin-bottom: 10px;
+   border: solid black 2px;
+   border-radius: 10px;
+   font-size: 20px;
+}
+
+.Contact-box .Message{
+   padding-bottom: 100px;
+   
+}
+
+.Contact-button{
+   background-color: red;
+   color: white;
+   padding: 8px 40px;
+   margin-left: 6%;
+   margin-bottom: 3%;
+   cursor: pointer;
+   border: none;
+   
+}
 
 /* mobile mode  */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .menu-bar-opentag{
         display: block;
     }
     .header-links{
         display: none;
     }    
-    /* home session */
-    #home-session{
-      width: 80%;
-      height: 350px;
-      margin: 80px 20px 80px 20px;
-      background-color: #c0c0c0;
-      padding: 15px;
-      overflow-x: hidden;
+    .header-head-contact{
+        display: none;
     }
-    .home-image{
-      display: none;
-    }
-    .home-heading{
-      margin-top: 70px;
-      font-size: small;
-    }
-    .home-para{
-      margin-bottom: 40px;
-    }
-    .home-input-email{
-      width: 180px;
-      padding: 8px;
-      border-radius: 12px;
-    }
-    .home-button
-    {
-      margin-top: 20px;
-      border: none;
-      padding: 8px;
-      font-size: small;
-    }
-    #home-blog-session{
-        width: 80%;
-        height: 1160px;
-        margin-left: 20px;
-        padding: 15px;
-    }
-    .post-session-inside{
-        width: 100px;
-        padding: 25px;
-        margin: 10px;
-    }
-    .post-session{
-       margin: 15px;
-    }
-    .post-imge-main{
-        font-size: x-small;
-    }
-    .post-img{
-        width: 80px;
-    }
+    
 }
 /* tab mode */
-@media (min-width:600px) and (max-width:1000px) {
-    #home-session{
-        width: 80%;
-        height: 700px;
-        margin-left: 20px;
-        padding-left: 80px;
+@media (min-width:401px) and (max-width:900px) {
+    .menu-bar-opentag{
+        display: block;
     }
-    .home-session-inside{
-        display: inline;
-    }
-      #home-blog-session{
-      width: 85%;
-      height: 820px;
-      margin-top: 60px;
-      margin-bottom: 60px;
-      margin-left: 30px;
-    }
-    .post-session-inside{
-        width: 160px;
-        padding: 25px;
-        margin: 15px;
-    }
-    .post-session{
-       margin: 15px;
-    }
-    .post-imge-main{
-        font-size: medium;
-    }
-    .post-img{
-        width: 130px;
+    .header-links{
+        display: none;
+    }    
+    .header-head-contact{
+        display: none;
     }
     
 }

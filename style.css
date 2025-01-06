@@ -71,7 +71,8 @@ header{
     height: 50%;
     position: fixed;
     top: -50%;
-    transition: 1s;
+    z-index: 2000;
+    transition: 1.5s;
 }
 .side-nav-closebar{
     text-align: right;
@@ -114,7 +115,7 @@ header{
     position: absolute;
     transform: translate(-50%,-50%);
     padding: 10px 30px;
-    background-color: #65636363;
+    background-color: rgba(101, 99, 99, 0.4); 
     border: 1px solid rgb(11, 1, 1);
     border-radius: 50px;
     font-size: 18px;

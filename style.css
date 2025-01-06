@@ -15,6 +15,7 @@ header{
     position: fixed;
     color: black;
     background-color: azure;
+    z-index: 2000;
 }
 #nav{
     padding: 30px;
@@ -127,6 +128,72 @@ header{
 
 /* Home session end */
 
+/* post session */
+.post-session {
+    margin: 30px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post-edit {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fdfdfd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-edit:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.post-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-head {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.post-mini-para {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+.post-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition :0.3s;
+}
+
+.post-btn:hover {
+    background-color: #0056b3;
+}
+/* Posts Section  end*/
+
 /*Contact section*/
 .contact-details{
     margin-top: 12%;
@@ -197,9 +264,31 @@ header{
     margin-left: 25px;
 }
 
+/* footer */
+footer{
+   background-color: #141920;
+   margin-bottom: 0px;
+   color: aliceblue;
+   padding: 20px;
+}
+.Footer-logo-img{
+    width: 20px;
+    height: 20px;
+}
+.footer-links{
+    text-decoration: none;
+    color: rgb(11, 255, 11);
+}
+.footer-head-links,
+.footer-logo,
+.footer-links,
+.footer-copyright{
+    margin: 10px;
+}
+/* footer end */
 
 /* mobile mode  */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 400px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -224,6 +313,13 @@ header{
         align-items: center;
         margin: 20px 0;
     }
+    .posts {
+        grid-template-columns: 1fr ;
+    }
+
+    .post-img img {
+        height: 150px;
+    }
     
     
 }
@@ -237,6 +333,13 @@ header{
     }    
     .header-head-contact{
         display: none;
+    }
+    .posts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .post-img img {
+        height: 150px;
     }
     
 }

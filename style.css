@@ -188,9 +188,18 @@ header{
     border-radius: 8px;
     overflow: hidden;
 }
+.contact-sub-head{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.contact-sub-head-link{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
 
 /* mobile mode  */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -206,10 +215,14 @@ header{
         margin-bottom:50px;
     }
     .contact-map iframe{
-        width: 250px;
-        height: 250px;
-        margin: 50px;
-        border: none;
+        width: 270px;
+        height: 270px;
+    }
+    .contact-map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
     }
     
     

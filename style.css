@@ -309,15 +309,39 @@ header{
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+.single-post-inside{
+    padding: 10px;
+}
+
 .single-post-head{
     text-align: center;
     margin: 20px;
+    font-size: 1.5rem;
 }
-.single-post-img-link{
-    width: 300px;
-    height: 300px;
+.single-post-img{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
-
+.single-post-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.single-post-img img:hover{
+    transform: scale(0.05);
+}
+.single-post-content{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+}
+.single-post-content-para{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
 
 

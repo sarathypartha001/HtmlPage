@@ -1,3 +1,17 @@
+// header session
+let menubaropen = document.querySelector(".menu-bar-opentag");
+let sidenavclosebar = document.querySelector(".side-nav-closebar");
+let sidenavbar = document.querySelector("#side-nav-bar");
+
+menubaropen.addEventListener("click",function(){
+    sidenavbar.style.top="0";
+});
+sidenavclosebar.addEventListener("click", function(){
+    sidenavbar.style.top="-50%";
+}) 
+// headeer session end 
+
+// single post session 
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('id');
@@ -48,3 +62,5 @@ if (posts[postId]) {
 }
 
 }
+
+// single post session end 

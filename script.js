@@ -11,6 +11,3 @@ sidenavclosebar.addEventListener("click", function(){
 })
 // header session end
 
-// post session
-
-// post session end

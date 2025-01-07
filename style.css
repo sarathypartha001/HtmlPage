@@ -61,7 +61,11 @@ header{
 }
 .header-head a:hover{
     color: red;
-    
+}
+#header-contact-icons{
+    margin-right: 5px;
+    color: forestgreen;
+    font-size: 20px;
 }
 /* header session end */
 
@@ -173,7 +177,7 @@ header{
     font-size: 0.95rem;
     color: #555;
     margin: 10px;
-    padding: 0 10px;
+    padding: 0 7px;
     line-height: 1.5;
 }
 
@@ -270,6 +274,7 @@ footer{
    margin-bottom: 0px;
    color: aliceblue;
    padding: 20px;
+   padding-top: 70px;
 }
 .Footer-logo-img{
     width: 20px;

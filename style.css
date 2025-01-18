@@ -340,7 +340,7 @@ header{
     margin: 20px 0;
 }
 
-/* Image Slider */
+
 .image-slider {
     display: flex;
     align-items: center;
@@ -349,17 +349,16 @@ header{
     overflow: hidden;
     margin: 20px 0;
 }
-
 .slider-container {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
     width: 100%;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
 }
 
 .slider-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
 }
 
 .slider-container div {
@@ -382,7 +381,7 @@ header{
     filter: grayscale(0);
 }
 
-/* Buttons for Navigation */
+
 .side-btn {
     position: absolute;
     top: 50%;
@@ -493,6 +492,7 @@ footer{
         font-size: 40px;
     }
     .single-post {
+        margin: 130px 15px 15px 15px;
         padding: 10px;
     }
 
@@ -537,6 +537,7 @@ footer{
     }
 
     .single-post {
+        margin: 130px 20px 20px 20px 20px;
         padding: 15px;
     }
 

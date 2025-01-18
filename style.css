@@ -308,7 +308,7 @@ header{
 
 /* single post session */
 .single-post {
-    margin: 150px 40px 40px 40px;
+    margin: 150px 20px 20px 20px ;
     padding: 20px;
     background: #fff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -349,6 +349,7 @@ header{
     overflow: hidden;
     margin: 20px 0;
 }
+
 .slider-container {
     display: flex;
     overflow-x: scroll;
@@ -358,7 +359,7 @@ header{
 }
 
 .slider-container::-webkit-scrollbar {
-    display: none;
+    display: none; 
 }
 
 .slider-container div {
@@ -381,7 +382,7 @@ header{
     filter: grayscale(0);
 }
 
-
+/* Buttons for Navigation */
 .side-btn {
     position: absolute;
     top: 50%;
@@ -492,7 +493,6 @@ footer{
         font-size: 40px;
     }
     .single-post {
-        margin: 130px 15px 15px 15px;
         padding: 10px;
     }
 
@@ -501,8 +501,8 @@ footer{
     }
 
     .slider-container img {
-        min-width: 200px;
-        height: 150px;
+        min-width: 370px;
+        height: 200px;
     }
 
     .side-btn {
@@ -537,7 +537,6 @@ footer{
     }
 
     .single-post {
-        margin: 130px 20px 20px 20px 20px;
         padding: 15px;
     }
 
@@ -546,8 +545,8 @@ footer{
     }
 
     .slider-container img {
-        min-width: 250px;
-        height: 180px;
+        min-width: 500px;
+        height: 250px;
     }
 
     .side-btn {

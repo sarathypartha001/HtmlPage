@@ -13,6 +13,7 @@ sidenavclosebar.addEventListener("click", function(){
 
 
 // single post session 
+
 // single post session  scroll bar
  let sliderContainerImg = document.getElementById("sider-container-box");
  let buttons = document.querySelectorAll(".side-btn");

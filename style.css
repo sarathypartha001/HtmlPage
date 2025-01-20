@@ -383,9 +383,9 @@ header{
 }
 
 .slider-container img {
-    min-width: 500px;
-    height: 400px;
-    margin: 10px;
+    min-width: 400px;
+    height: 350px;
+    margin: 8px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.3s, filter 0.3s;

@@ -23,18 +23,7 @@ sidenavclosebar.addEventListener("click", function(){
     sliderContainerImg.scrollLeft += event.deltaY * 2;
     sliderContainerImg.style.scrollBehavior = "smooth";
  })
- buttons.forEach((btn)=>{
-    btn.addEventListener("click",()=>{
-         if(btn.classList.contains("prev-btn")){
-            sliderContainerImg.scrollLeft -= 300;
-            sliderContainerImg.style.scrollBehavior = "smooth";
-         }else if(btn.classList.contains("next-btn")){
-            sliderContainerImg.scrollLeft += 300;
-            sliderContainerImg.style.scrollBehavior = "smooth";
-         }
-        
-    })
- })
+
 
 // single post session  scroll bar end
 window.onload = function() {

@@ -117,31 +117,89 @@ header{
 }
 /* side nav end  */
 /* Home session */
+#home-session{
+    margin: 20px 10px 10px 10px;
+}
 .home-image{
     background-image: url("images/background1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 85vh;
+    height: 90vh;
+    transition: background-image 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
+.home-slide-btn {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.home-slide-btn input {
+    width: 1px;
+    height: 1px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 50%;
+    appearance: none;
+    transform: scale(0.8);
+}
+.home-slide-btn input:hover {
+    background-color: rgb(54, 25, 25);
+}
+.home-slide-btn input:checked{
+    background-color: rgb(138, 2, 2);
+}
+.home-slider-img-arow{
+    width: 42px;
+    height: 42px;
+    top: 46%;
+    cursor: pointer;
+    transform: translate(-46%);
+    position: absolute;
+    background-color: #087bf7f1;
+    border-radius: 100%;
+}
+.home-slider-img-arow:hover{
+    background-color: blue;
+}
+.home-slide-right{
+    right: 3%;
+    transform: translate(-3%);
+}
+.home-slide-left{
+    left: 3%;
+    transform: translate(-3%);
+}
+
 .home-btn{
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
     padding: 10px 30px;
-    background-color: rgba(247, 227, 227, 0.4); 
+    background-color: rgb(175, 0, 0);
     border: 1px solid rgb(11, 1, 1);
     border-radius: 50px;
+    display: grid;
+    grid-template-columns: auto;
     font-size: 18px;
 }
 .home-btn a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .home-btn:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(230, 8, 8, 0.4);
 }
 .home-btn a:hover{
     color: white;
@@ -307,16 +365,28 @@ header{
     margin-left: 25px;
 }
 .whatsapp-logo{
+    position: fixed;
     z-index: 2000;
     bottom: 25px;
     right: 25px;
-    position:fixed;
+    animation: spin 0.9s ease-in-out;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 #whatsapp-icons{
     font-size: 60px;
 }
 #whatsapp-icons:hover{
     transform: scale(1.2);
+    
 }
 
 
@@ -398,37 +468,7 @@ header{
     filter: grayscale(0);
 }
 
-/* Buttons for Navigation */
-.side-btn {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 0, 0, 0.7);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    cursor: pointer;
-    z-index: 10;
-    padding: 5px;
-}
 
-.side-btn img {
-    width: 30px;
-    height: 30px;
-}
-
-.side-btn:hover {
-    background-color: rgba(255, 0, 0, 0.9);
-}
-
-.prev-btn {
-    margin: 10px 0px 10px 10px;
-}
-
-.next-btn {
-    margin: 10px 10px 0px 10px;
-}
 /* single post end */
 /* footer */
 footer{
@@ -462,6 +502,80 @@ footer{
 
 
 /* mobile mode  */
+@media scrren and (max-width:300px){
+    .menu-bar-opentag{
+        display: block;
+    }
+    .header-links{
+        display: none;
+    }    
+    .header-head-contact{
+        display: none;
+    }
+    .header-head--media{
+        display: block;
+    }
+    .header-head{
+        display: none;
+    }
+    .contact-information{
+        margin-top: -15px;
+        display: inline;
+        margin-bottom:50px;
+    }
+    .contact-map iframe{
+        width: 270px;
+        height: 270px;
+    }
+    .contact-map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .posts {
+        grid-template-columns: 1fr ;
+    }
+
+    .post-img img {
+        height: 150px;
+    }
+    .whatsapp-logo{
+        z-index: 2000;
+        bottom: 22px;
+        right: 22px;
+        position:fixed;
+    }
+    #whatsapp-icons{
+        font-size: 40px;
+    }
+    .single-post {
+        padding: 10px;
+    }
+    .home-slide-right{
+        right: 5%;
+        transform: translate(-5%);
+    }
+    .home-slide-left{
+        left: 5%;
+        transform: translate(-5%);
+    }
+    .single-post-head {
+        font-size: 1.5rem;
+    }
+
+    .slider-container img {
+        min-width: 230px;
+        height: 210px;
+        margin: 7px;
+    }
+
+    .side-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .menu-bar-opentag{
         display: block;
@@ -502,7 +616,7 @@ footer{
     }
     .whatsapp-logo{
         z-index: 2000;
-        bottom: 16px;
+        bottom: 22px;
         right: 22px;
         position:fixed;
     }
@@ -518,7 +632,7 @@ footer{
     }
 
     .slider-container img {
-        min-width: 300px;
+        min-width: 270px;
         height: 250px;
         margin: 7px;
     }

@@ -10,7 +10,22 @@ sidenavclosebar.addEventListener("click", function(){
     sidenavbar.style.top="-50%";
 })
 // header session end
+// home Section
+const images = [
+    "images/background1.jpg",
+    "images/background\ image\ 3.jpg",
+    "images/background\ img\ 4.jpg",
+    "images/backgroundimage.jpg",
+    "images/backgroundimage2.jpg",
+    "images/backgroundimg5.jpg"
+]
 
+function changeImages(index){
+    let homeImages = document.querySelector(".home-image");
+
+    homeImages.style.backgroundImage = `URL('${images[index]}')`;
+}
+// home session end
 // single post session
 // Add this to your script.js
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,10 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         },
-        { threshold: 0.2 } // Trigger when 20% of the element is in view
+        { threshold: 0.2 } 
     );
 
-    document.querySelectorAll('.post-edit').forEach(post => observer.observe(post)); // Observe each post
+    document.querySelectorAll('.post-edit').forEach(post => observer.observe(post)); 
 });
 
 // single post session end 

@@ -162,9 +162,9 @@ header{
 .home-slider-img-arow{
     width: 42px;
     height: 42px;
-    top: 46%;
+    top: 47%;
     cursor: pointer;
-    transform: translate(-46%);
+    transform: translate(-47%);
     position: absolute;
     background-color: #087bf7f1;
     border-radius: 100%;
@@ -382,7 +382,7 @@ header{
     }
 }
 #whatsapp-icons{
-    font-size: 60px;
+    font-size: 80px;
 }
 #whatsapp-icons:hover{
     transform: scale(1.2);

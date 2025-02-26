@@ -20,11 +20,47 @@ const images = [
     "images/backgroundimg5.jpg"
 ]
 
-function changeImages(index){
-    let homeImages = document.querySelector(".home-image");
+let currentIndex = 0;
+let homeImages = document.querySelector(".home-image");
+let homeRadioBtn = document.querySelectorAll(".home-slide-btn input");
+let homeslideleft = document.querySelector(".home-slide-left");
+let homeslideright = document.querySelector(".home-slide-right");
 
-    homeImages.style.backgroundImage = `URL('${images[index]}')`;
+function changeImage  (index){
+   currentIndex = index;
+   homeImages.style.backgroundImage = `url('${images[currentIndex]}')`
+   homeRadioBtn[currentIndex].checked = true;
 }
+
+function autoSlide(){
+    currentIndex = (currentIndex+1)%images.length
+    changeImage(currentIndex);
+}
+
+let slideIntervel = setInterval(autoSlide, 3000);
+
+homeRadioBtn.forEach((radioBtn , index)=>{
+    radioBtn.addEventListener("click",()=>{
+        clearInterval(slideIntervel);
+        changeImage(index);
+        slideIntervel = setInterval(autoSlide, 3000); 
+    })
+})
+
+homeslideleft.addEventListener("click", ()=>{
+    clearInterval(slideIntervel);
+    currentIndex = (currentIndex - 1 +images.length)%images.length;
+    changeImage(currentIndex);
+    slideIntervel = setInterval(autoSlide, 3000)
+})
+
+homeslideright.addEventListener("click", ()=>{
+    clearInterval(slideIntervel);
+    currentIndex = (currentIndex + 1 )%images.length;
+    changeImage(currentIndex);
+    slideIntervel = setInterval(autoSlide, 3000);
+})
+
 // home session end
 // single post session
 // Add this to your script.js

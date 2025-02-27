@@ -359,7 +359,7 @@ header{
     background-color: #ffe3e3;
     margin: 10px 85px;
     border-radius: 20px;
-    padding: 10px 35px;
+    padding: 15px 60px;
 }
 .contact-head{
     color: rgb(0, 0, 0);
@@ -526,7 +526,7 @@ footer{
 
 
 /* mobile mode  */
-@media scrren and (max-width:300px){
+@media scrren and (max-width:350px){
     .menu-bar-opentag{
         display: block;
     }
@@ -549,9 +549,9 @@ footer{
     }
     .contact{
         background-color: #ffe3e3;
-        margin: 10px 85px;
+        margin: 10px 40px;
         border-radius: 20px;
-        padding: 10px;
+        padding: 10px 20px;
     }
     .contact-map iframe{
         width: 270px;
@@ -642,14 +642,14 @@ footer{
         margin-bottom:50px;
     }
     .contact-map iframe{
-        width: 240px;
-        height: 240px;
+        width: 260px;
+        height: 260px;
     }
     .contact{
         background-color: #ffe3e3;
-        margin: 10px 85px;
+        margin: 10px 50px;
         border-radius: 20px;
-        padding: 10px 15px;
+        padding: 10px 10px;
     }
     .contact-head{
         font-size: 22px;
@@ -738,14 +738,14 @@ footer{
         font-size: 18px;
     }
     .contact-map iframe{
-        width: 240px;
-        height: 240px;
+        width: 270px;
+        height: 320px;
     }
     .contact{
         background-color: #ffe3e3;
-        margin: 10px 85px;
+        margin: 15px 10px;
         border-radius: 20px;
-        padding: 10px 3px;
+        padding: 10px 35px;
     }
     .post-img img {
         height: 150px;

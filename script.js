@@ -10,6 +10,7 @@ sidenavclosebar.addEventListener("click", function(){
     sidenavbar.style.top="-50%";
 })
 // header session end
+
 // home Section
 const images = [
     "images/background1.jpg",
@@ -37,13 +38,13 @@ function autoSlide(){
     changeImage(currentIndex);
 }
 
-let slideIntervel = setInterval(autoSlide, 3000);
+let slideIntervel = setInterval(autoSlide, 4000);
 
 homeRadioBtn.forEach((radioBtn , index)=>{
     radioBtn.addEventListener("click",()=>{
         clearInterval(slideIntervel);
         changeImage(index);
-        slideIntervel = setInterval(autoSlide, 3000); 
+        slideIntervel = setInterval(autoSlide, 4000); 
     })
 })
 
@@ -51,21 +52,23 @@ homeslideleft.addEventListener("click", ()=>{
     clearInterval(slideIntervel);
     currentIndex = (currentIndex - 1 +images.length)%images.length;
     changeImage(currentIndex);
-    slideIntervel = setInterval(autoSlide, 3000)
+    slideIntervel = setInterval(autoSlide, 4000)
 })
 
 homeslideright.addEventListener("click", ()=>{
     clearInterval(slideIntervel);
     currentIndex = (currentIndex + 1 )%images.length;
     changeImage(currentIndex);
-    slideIntervel = setInterval(autoSlide, 3000);
+    slideIntervel = setInterval(autoSlide, 4000);
 })
 
 // home session end
-// single post session
-// Add this to your script.js
-document.addEventListener('DOMContentLoaded', () => {
 
+// single post session
+
+document.addEventListener('DOMContentLoaded', () => {
+ 
+    let postEdit = document.querySelectorAll('.post-edit')
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
@@ -81,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { threshold: 0.2 } 
     );
 
-    document.querySelectorAll('.post-edit').forEach(post => observer.observe(post)); 
+    postEdit.forEach(post => observer.observe(post)); 
 });
 
 // single post session end 

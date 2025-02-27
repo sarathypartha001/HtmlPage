@@ -118,7 +118,7 @@ header{
 /* side nav end  */
 /* Home session */
 #home-session{
-    margin: 20px 10px 10px 10px;
+    margin: 50px 1px 1px 1px;
 }
 .home-image{
     background-image: url("images/background1.jpg");
@@ -151,7 +151,7 @@ header{
     border: 2px solid black;
     border-radius: 50%;
     appearance: none;
-    transform: scale(0.8);
+    transform: scale(0.6);
 }
 .home-slide-btn input:hover {
     background-color: rgb(54, 25, 25);
@@ -160,8 +160,8 @@ header{
     background-color: rgb(138, 2, 2);
 }
 .home-slider-img-arow{
-    width: 42px;
-    height: 42px;
+    width: 37px;
+    height: 37px;
     top: 47%;
     cursor: pointer;
     transform: translate(-47%);
@@ -210,7 +210,7 @@ header{
 
 /* post session */
 .post-session {
-    margin: 30px;
+    margin: 50px 20px 50px 20px;
     padding: 20px;
     background: #fff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -304,8 +304,10 @@ header{
 .Contact{
     background-color: #1D232C;
     color: white;
-    margin: 5%;
+    margin: 3%;
     padding-top: 20px;
+    padding-bottom: 21px;
+    border-radius: 10px;
 }
 
 .contact ,.Contact-box{
@@ -335,6 +337,7 @@ header{
    margin-bottom: 3%;
    cursor: pointer;
    border: none;
+   border-radius: 10px;
    
 }
 .contact-information{
@@ -344,11 +347,11 @@ header{
     margin-bottom:50px;
 }
 .contact-head{
-    color: rgb(11, 254, 43);
+    color: rgb(0, 0, 0);
 }
 .contact-link{
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 22px;
 }
 .contact-map {
     margin-top: 20px;
@@ -363,6 +366,11 @@ header{
 .contact-sub-head-link{
     margin-top: 10px;
     margin-left: 25px;
+    text-decoration: none;
+    color: #0056b3;
+}
+.contact-sub-head-link:hover{
+    color: #ff0303;
 }
 .whatsapp-logo{
     position: fixed;
@@ -473,7 +481,7 @@ header{
 /* footer */
 footer{
    background-color: #141920;
-   bottom: 1px;
+   bottom: 0px;
    color: aliceblue;
    padding: 20px;
    padding-top: 70px;
@@ -560,6 +568,9 @@ footer{
         left: 5%;
         transform: translate(-5%);
     }
+    .home-slide-btn input {
+        transform: scale(0.4);
+    }
     .single-post-head {
         font-size: 1.5rem;
     }
@@ -576,7 +587,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -592,20 +603,44 @@ footer{
     .header-head{
         display: none;
     }
+    .home-slide-btn input {
+        transform: scale(0.4);
+    }
+
+
+    .Contact-box h3{
+        font-size: 16px;
+    }
+    .Contact-box input{
+        font-size: 16px;
+    }
     .contact-information{
         margin-top: -15px;
         display: inline;
         margin-bottom:50px;
     }
     .contact-map iframe{
-        width: 270px;
-        height: 270px;
+        width: 240px;
+        height: 240px;
+    }
+    .contact-head{
+        font-size: 22px;
+    }
+    .contact-link{
+        font-size: 16px;
+    }
+    .contact{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .contact-map{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .posts {
         grid-template-columns: 1fr ;
@@ -650,7 +685,7 @@ footer{
     
 }
 /* tab mode */
-@media (min-width:601px) and (max-width:1100px) {
+@media  (min-width:651px) and (max-width:1100px) {
     .menu-bar-opentag{
         display: block;
     }
@@ -663,7 +698,17 @@ footer{
     .posts {
         grid-template-columns: 1fr 1fr;
     }
-
+    
+    .contact-head{
+        font-size: 25px;
+    }
+    .contact-link{
+        font-size: 18px;
+    }
+    .contact-map iframe{
+        width: 240px;
+        height: 240px;
+    }
     .post-img img {
         height: 150px;
     }

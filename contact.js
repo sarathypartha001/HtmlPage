@@ -11,3 +11,22 @@ sidenavclosebar.addEventListener("click", function(){
 })
 // header session end
 
+// contact session
+ 
+
+let ContactButton = document.querySelector(".Contact-button")
+
+ContactButton.addEventListener("click",function(event){
+    event.preventDefault();
+    let contactInput =  document.querySelectorAll(".contact-input");
+    let dataFrame = {};
+    contactInput.forEach((input)=>{
+        dataFrame[input.name] = input.value
+    })
+    console.log(dataFrame);
+    setTimeout(()=>{
+        window.location.reload();
+    },3000);
+   
+})
+// contact session end 

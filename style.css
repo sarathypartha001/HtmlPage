@@ -390,11 +390,10 @@ header{
     }
 }
 #whatsapp-icons{
-    font-size: 80px;
+    font-size: 95px;
 }
 #whatsapp-icons:hover{
     transform: scale(1.2);
-    
 }
 
 
@@ -680,6 +679,10 @@ footer{
     .side-btn img {
         width: 15px;
         height: 15px;
+    }
+    #whatsapp-icons{
+        font-size: 85px;
+        
     }
     
     

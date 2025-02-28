@@ -413,7 +413,80 @@ header{
     transform: scale(1.2);
 }
 
+/* about session */
 
+.about-radio-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    display: flex;
+    bottom: 70px;
+}
+.about-radio-btn input{
+    width: 1px;
+    height: 1px;
+    cursor: pointer;
+    background-color: #fa5c5c;
+    border: 2px solid black;
+    border-radius: 50%;
+    appearance: none;
+    transform: scale(0.6);
+}
+.about-radio-btn input:hover{
+    background-color: #ff0303;
+}
+.about-radio-btn input:checked{
+    background-color: yellow;
+}
+.about-home-image{
+    margin: 1px;
+    background-image: url("images/moonlit5.jpeg");
+    background-size:cover; 
+    margin-top: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    transition: background-image 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.about-arow{
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 100%;
+    padding: 1px;
+}
+.about-btn{
+    top: 50%;
+    transform: translate(-50%);
+}
+.about-arow:hover{
+    background-color: rgb(218, 33, 1);
+}
+.left-arow{
+    left: 3%;
+    transform: translate(-3%);
+}
+.right-arow{
+    right: 3%;
+    transform: translate(-3%);
+}
+
+.about-container{
+    margin: 100px 20px 100px 20px;
+}
+
+/* about session end  */
 
 
 /* single post session */
@@ -714,6 +787,16 @@ footer{
         
     }
     
+    .about-arow{
+        width: 30px;
+        height: 30px;
+    }
+    .about-radio-btn input{
+        transform: scale(0.5);
+    }
+    .about-btn{
+        padding: 6px 20px;
+    }
     
 }
 /* tab mode */

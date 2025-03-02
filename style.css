@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    height: auto;
 }
 body{
     background-color: whitesmoke;
@@ -447,7 +448,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     transition: background-image 0.8s ease-in-out;
     display: flex;
     justify-content: center;
@@ -483,7 +484,7 @@ header{
 }
 
 .about-container{
-    margin: 100px 20px 100px 20px;
+    margin: 50px;
 }
 
 /* about session end  */
@@ -567,14 +568,14 @@ header{
 
 
 /* single post end */
+
 /* footer */
 footer{
    background-color: #141920;
-   bottom: 0px;
    color: aliceblue;
    padding: 20px;
    padding-top: 70px;
-   position: relative;
+   bottom: 0px;
 }
 .Footer-logo-img{
     width: 20px;
@@ -594,6 +595,8 @@ footer{
 .footer-copyright{
     margin: 10px;
 }
+
+
 /* footer end */
 
 

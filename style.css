@@ -94,10 +94,12 @@ header{
     text-align: right;
     cursor: pointer;
     color: white;
-    font-size: 30px;
-    margin-top: 15px;
-    margin-right: 15px;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 25px;
+    
 }
+
 .side-nav-closebar:hover{
     color: red;
 }
@@ -380,6 +382,8 @@ header{
 }
 .contact-map iframe{
     border-radius: 20px;
+    width: 370px;
+    height: 370px;
 }
 .contact-sub-head-link{
     margin-top: 10px;
@@ -415,15 +419,7 @@ header{
 }
 
 /* about session */
-.about-body{
-    background-image: url("images/backgroundimg.jpg");
-    background-position: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
 
-}
 .about-radio-btn{
     position: absolute;
     left: 50%;
@@ -451,7 +447,7 @@ header{
 .about-home-image{
     background-image: url("images/moonlit5.jpeg");
     background-size:cover; 
-    margin-top: 90px;
+    margin-top: 70px;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -474,7 +470,6 @@ header{
     border-radius: 100%;
     padding: 1px;
 }
-
 .about-btn{
     top: 50%;
     transform: translate(-50%);
@@ -492,8 +487,39 @@ header{
 }
 
 .about-container{
-    margin: 35px;
-    padding: 20px;
+    margin: 50px;
+}
+.about-session-head{
+    margin: 20px;
+    text-align: center;
+    color: #000000;
+}
+.about-para{
+    margin: 10px;
+    font-size: 20px;
+}
+.for-contact-about{
+    margin: 18px;
+}
+.for-contact-about h2{
+    margin: 20px 15px 15px 15px ;
+    font-size: 20px;
+}
+.for-contact-about p,
+.for-contact-about a{
+    margin: 15px;
+    font-size: 20px;
+}
+.for-contact-about a{
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+.for-contact-about a:hover{
+    color: blue;
+}
+.about-body{
+    background-color: rgb(243, 227, 204);
 }
 
 
@@ -613,7 +639,7 @@ footer{
 
 
 /* mobile mode  */
-@media scrren and (max-width:350px){
+ @media scrren and (max-width:350px){
     .menu-bar-opentag{
         display: block;
     }
@@ -694,14 +720,10 @@ footer{
         width: 30px;
         height: 30px;
     }
-    .about-home-image{
-        background-size:contain;
-        width: 100%;
-        height: 90vh;
+    .about-container{
+        font-size: 13px;
     }
-    .about-radio-btn{
-        display: none;
-    }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -765,6 +787,7 @@ footer{
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
     .posts {
         grid-template-columns: 1fr ;
     }
@@ -808,7 +831,12 @@ footer{
         font-size: 85px;
         
     }
-    
+    .about-session-head{
+        font-size: 18px;
+    }
+    .about-para{
+        font-size: 15px;
+    }
     .about-arow{
         width: 30px;
         height: 30px;
@@ -819,14 +847,12 @@ footer{
     .about-btn{
         padding: 6px 20px;
     }
-    .about-home-image{
-        background-size:contain;
-        width: 100%;
-        height: 90vh;
-        margin-top: 20px;
+    .for-contact-about h2{
+        font-size: 17px;
     }
-    .about-radio-btn{
-        display: none;
+    .for-contact-about p,
+    .for-contact-about a{
+        font-size: 14px;
     }
     
 }

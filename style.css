@@ -451,7 +451,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     transition: background-image 0.8s ease-in-out;
     display: flex;
     justify-content: center;
@@ -831,24 +831,6 @@ footer{
         font-size: 85px;
         
     }
-    .about-home-image{
-        background-image: url("images/moonlit5.jpeg");
-        background-size:contain; 
-        margin-top: 70px;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 90vh;
-        transition: background-image 0.8s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-    }
-    .about-radio-btn{
-        display: none;
-    }
     .about-session-head{
         font-size: 18px;
     }
@@ -865,12 +847,17 @@ footer{
     .about-btn{
         padding: 6px 20px;
     }
+    .for-contact-about{
+        margin: 10px;
+    }
     .for-contact-about h2{
+        margin: 6px;
         font-size: 17px;
     }
     .for-contact-about p,
     .for-contact-about a{
-        font-size: 14px;
+        margin: 6px;
+        font-size: 15px;
     }
     
 }

@@ -24,255 +24,360 @@ sidenavclosebar.addEventListener("click", function(){
     sliderContainerImg.style.scrollBehavior = "smooth";
  })
 
-
-// single post session  scroll bar end
-window.onload = function() {
+// single post seesion 
+window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('id');
 
-const posts = {
-   1: {
-        title: "Hotel Silver Spring",
-        // first point
-        contentposthead1: "Hotel Overview",
-        contentInsidePointul1One: "Location : Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
-        contentInsidePointul1Two: "Setting : Nestled beside a stream, providing a tranquil environment close to nature.",
-        // second point
-        contentposthead2: "Room Types & Feature",
-        contentInsidePointul2One: "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
-        contentInsidePointul2Two: "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
-        contentInsidePointul2Three: "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
-        contentInsidePointul2_Four: "Common Amenities:",
-        contentInsidePointul2_ul1_One: "Television",
-        contentInsidePointul2_ul1_Two: "Free Wi-Fi",
-        contentInsidePointul2_ul1_Three: "Attached bathroom",
-        contentInsidePointul2_ul1_Four: "Seating area",
-        contentInsidePointul2_ul1_Five: "Daily housekeeping",
-        contentInsidePointul2_ul1_Six: "24-hour room service",
-        // third point
-        contentposthead3: "Dining Options",
-        contentInsidePointul3One: "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
-        contentInsidePointul3Two: "Garden Restaurant: An open-air dining experience amidst nature.",
-        contentInsidePointul3Three: "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day.",
-        // fourth Point
-        contentposthead4: "Amenities & Services",
-        contentInsidePointul4One: "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
-        contentInsidePointul4Two: "GHousekeeping: Daily housekeeping to maintain cleanliness.",
-        contentInsidePointul4Three: "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
-        contentInsidePointul4Four: "Taxi Service: Available for guest convenience.",
-        contentInsidePointul4Five: "Deluxe Room:Bonfire & Barbecue: Organized upon request, ideal for group gatherings.",
-        // fifith Point
-        contentposthead5: "Booking",
-        contentInsidePointul5One: "Check-in/Check-out: Check-in at 10:00 AM and check-out at 10:00 AM.",
-        // images slide 
-        images: ["images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
-                 "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
-        ],
-    },
-    2: {
-        title: "Hotel Summer Palace",
-        // first point
-        contentposthead1: "Hotel Overview",
-        contentInsidePointul1One: "Location : Summer Palace (Yogi Rooms.Online) is a budget-friendly accommodation located at 5/27-4, Laws Ghat Road, Moonjikkal, Kodaikanal, Tamil Nadu 624101.",
-        contentInsidePointul1Two: "Situated approximately 0.91 km from the city center, it offers convenient access to popular attractions such as Bryant Park, Kodaikanal Lake, and Coaker's Walk.",
-        // second point
-        contentposthead2: "Room Types & Feature",
-        contentInsidePointul2One: "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
-        contentInsidePointul2Two: "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
-        contentInsidePointul2Three: "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
-        contentInsidePointul2_Four: "Common Amenities:",
-        contentInsidePointul2_ul1_One: "Television",
-        contentInsidePointul2_ul1_Two: "Free Wi-Fi",
-        contentInsidePointul2_ul1_Three: "Attached bathroom",
-        contentInsidePointul2_ul1_Four: "Seating area",
-        contentInsidePointul2_ul1_Five: "Daily housekeeping",
-        contentInsidePointul2_ul1_Six: "24-hour room service",
-        // third point
-        contentposthead3: "Dining Options",
-        contentInsidePointul3One: "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
-        contentInsidePointul3Two: "Garden Restaurant: An open-air dining experience amidst nature.",
-        contentInsidePointul3Three: "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day.",
-        // fourth Point
-        contentposthead4: "Amenities & Services",
-        contentInsidePointul4One: "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
-        contentInsidePointul4Two: "GHousekeeping: Daily housekeeping to maintain cleanliness.",
-        contentInsidePointul4Three: "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
-        contentInsidePointul4Four: "Taxi Service: Available for guest convenience.",
-        contentInsidePointul4Five: "Deluxe Room:Bonfire & Barbecue: Organized upon request, ideal for group gatherings.",
-        // fifith Point
-        contentposthead5: "Booking",
-        contentInsidePointul5One: "Check-in/Check-out: Check-in at 11:00 AM and check-out at 10:00 AM.",
-        // images 
-        images: ["images/silverspring1.jpg","images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
-                 "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
-        ],
-    },
-    3: {
-        title: "moonlit Abode Cottage",
-        // first point
-        contentposthead1: "Hotel Overview",
-        contentInsidePointul1One: "Location : Situated approximately 0.8 km from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
-        contentInsidePointul1Two: "Setting : Nestled beside a stream, providing a tranquil environment close to nature.",
-        // second point
-        contentposthead2: "Room Types & Feature",
-        contentInsidePointul2One: "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
-        contentInsidePointul2Two: "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
-        contentInsidePointul2Three: "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
-        contentInsidePointul2_Four: "Common Amenities:",
-        contentInsidePointul2_ul1_One: "Television",
-        contentInsidePointul2_ul1_Two: "Free Wi-Fi",
-        contentInsidePointul2_ul1_Three: "Attached bathroom",
-        contentInsidePointul2_ul1_Four: "Seating area",
-        contentInsidePointul2_ul1_Five: "Daily housekeeping",
-        contentInsidePointul2_ul1_Six: "24-hour room service",
-        // third point
-        contentposthead3: "Dining Options",
-        contentInsidePointul3One: "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
-        contentInsidePointul3Two: "Garden Restaurant: An open-air dining experience amidst nature.",
-        contentInsidePointul3Three: "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day.",
-        // fourth Point
-        contentposthead4: "Amenities & Services",
-        contentInsidePointul4One: "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
-        contentInsidePointul4Two: "GHousekeeping: Daily housekeeping to maintain cleanliness.",
-        contentInsidePointul4Three: "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
-        contentInsidePointul4Four: "Taxi Service: Available for guest convenience.",
-        contentInsidePointul4Five: "Deluxe Room:Bonfire & Barbecue: Organized upon request, ideal for group gatherings.",
-        // fifith Point
-        contentposthead5: "Booking",
-        contentInsidePointul5One: "Check-in/Check-out: Check-in at 11:00 AM and check-out at 10:00 AM.",
-        // images 
-        images: ["images/silverspring1.jpg","images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
-                 "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"],
-    },
-    4: {
-        title: "Rainbow Cottage",
-       // first point
-       contentposthead1: "Hotel Overview",
-       contentInsidePointul1One: "Location : Situated approximately 0.8 km from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
-       contentInsidePointul1Two: "Setting : Nestled beside a stream, providing a tranquil environment close to nature.",
-       // second point
-       contentposthead2: "Room Types & Feature",
-       contentInsidePointul2One: "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
-       contentInsidePointul2Two: "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
-       contentInsidePointul2Three: "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
-       contentInsidePointul2_Four: "Common Amenities:",
-       contentInsidePointul2_ul1_One: "Television",
-       contentInsidePointul2_ul1_Two: "Free Wi-Fi",
-       contentInsidePointul2_ul1_Three: "Attached bathroom",
-       contentInsidePointul2_ul1_Four: "Seating area",
-       contentInsidePointul2_ul1_Five: "Daily housekeeping",
-       contentInsidePointul2_ul1_Six: "24-hour room service",
-       // third point
-       contentposthead3: "Dining Options",
-       contentInsidePointul3One: "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
-       contentInsidePointul3Two: "Garden Restaurant: An open-air dining experience amidst nature.",
-       contentInsidePointul3Three: "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day.",
-       // fourth Point
-       contentposthead4: "Amenities & Services",
-       contentInsidePointul4One: "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
-       contentInsidePointul4Two: "GHousekeeping: Daily housekeeping to maintain cleanliness.",
-       contentInsidePointul4Three: "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
-       contentInsidePointul4Four: "Taxi Service: Available for guest convenience.",
-       contentInsidePointul4Five: "Deluxe Room:Bonfire & Barbecue: Organized upon request, ideal for group gatherings.",
-       // fifith Point
-       contentposthead5: "Booking",
-       contentInsidePointul5One: "Check-in/Check-out: Check-in at 11:00 AM and check-out at 10:00 AM.",
-       // images 
-        images: ["images/silverspring1.jpg","images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
-                 "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"],
-    },
-    5: {
-        title: "Serenity Stay Cottage",
-        // first point
-        contentposthead1: "Hotel Overview",
-        contentInsidePointul1One: "Location : Situated approximately 0.8 km from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
-        contentInsidePointul1Two: "Setting : Nestled beside a stream, providing a tranquil environment close to nature.",
-        // second point
-        contentposthead2: "Room Types & Feature",
-        contentInsidePointul2One: "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
-        contentInsidePointul2Two: "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
-        contentInsidePointul2Three: "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
-        contentInsidePointul2_Four: "Common Amenities:",
-        contentInsidePointul2_ul1_One: "Television",
-        contentInsidePointul2_ul1_Two: "Free Wi-Fi",
-        contentInsidePointul2_ul1_Three: "Attached bathroom",
-        contentInsidePointul2_ul1_Four: "Seating area",
-        contentInsidePointul2_ul1_Five: "Daily housekeeping",
-        contentInsidePointul2_ul1_Six: "24-hour room service",
-        // third point
-        contentposthead3: "Dining Options",
-        contentInsidePointul3One: "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
-        contentInsidePointul3Two: "Garden Restaurant: An open-air dining experience amidst nature.",
-        contentInsidePointul3Three: "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day.",
-        // fourth Point
-        contentposthead4: "Amenities & Services",
-        contentInsidePointul4One: "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
-        contentInsidePointul4Two: "GHousekeeping: Daily housekeeping to maintain cleanliness.",
-        contentInsidePointul4Three: "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
-        contentInsidePointul4Four: "Taxi Service: Available for guest convenience.",
-        contentInsidePointul4Five: "Deluxe Room:Bonfire & Barbecue: Organized upon request, ideal for group gatherings.",
-        // fifith Point
-        contentposthead5: "Booking",
-        contentInsidePointul5One: "Check-in/Check-out: Check-in at 11:00 AM and check-out at 10:00 AM.",
-        // images 
-        images: ["images/silverspring1.jpg","images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
-                 "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"],
-    },
+    const posts = {
+        1: {
+            title: "Hotel Silver Spring",
+            points: [
+                {
+                    heading: "Hotel Overview",
+                    items: [
+                        "Location: Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
+                        "Setting: Nestled beside a stream, providing a tranquil environment close to nature."
+                    ]
+                },
+                {
+                    heading: "Room Types & Features",
+                    items: [
+                        "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
+                        "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
+                        "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
+                        "Common Amenities:",
+                        [
+                            "Television",
+                            "Free Wi-Fi",
+                            "Attached bathroom",
+                            "Seating area",
+                            "Daily housekeeping",
+                            "24-hour room service"
+                        ]
+                    ]
+                },
+                {
+                    heading: "Dining Options",
+                    items: [
+                        "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
+                        "Garden Restaurant: An open-air dining experience amidst nature.",
+                        "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day."
+                    ]
+                },
+                {
+                    heading: "Amenities & Services",
+                    items: [
+                        "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
+                        "Housekeeping: Daily housekeeping to maintain cleanliness.",
+                        "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
+                        "Taxi Service: Available for guest convenience.",
+                        "Deluxe Room: Bonfire & Barbecue: Organized upon request, ideal for group gatherings."
+                    ]
+                },
+              
+            ],
+            images: [
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
+            ],
+            mapDetails: [
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.2668179192437!2d77.4960019!3d10.240051500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07665f9e994a6d%3A0x3192c2186e2583d2!2sHotel%20Silver%20Springs!5e0!3m2!1sen!2sin!4v1746259134383!5m2!1sen!2sin"
+            ]
+            },
+        //  second Page
+        2: {
+            title: "Hotel Summer Palace",
+            points: [
+                {
+                    heading: "Hotel Overview",
+                    items: [
+                        "Location: Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
+                        "Setting: Nestled beside a stream, providing a tranquil environment close to nature."
+                    ]
+                },
+                {
+                    heading: "Room Types & Features",
+                    items: [
+                        "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
+                        "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
+                        "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
+                        "Common Amenities:",
+                        [
+                            "Television",
+                            "Free Wi-Fi",
+                            "Attached bathroom",
+                            "Seating area",
+                            "Daily housekeeping",
+                            "24-hour room service"
+                        ]
+                    ]
+                },
+                {
+                    heading: "Dining Options",
+                    items: [
+                        "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
+                        "Garden Restaurant: An open-air dining experience amidst nature.",
+                        "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day."
+                    ]
+                },
+                {
+                    heading: "Amenities & Services",
+                    items: [
+                        "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
+                        "Housekeeping: Daily housekeeping to maintain cleanliness.",
+                        "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
+                        "Taxi Service: Available for guest convenience.",
+                        "Deluxe Room: Bonfire & Barbecue: Organized upon request, ideal for group gatherings."
+                    ]
+                },
+              
+            ],
+            images: [
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
+            ],
+            mapDetails: [
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.2793847514727!2d77.4958339!3d10.239036299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767ab31769d97%3A0xb2c4e386be959760!2sSummer%20Palace!5e0!3m2!1sta!2sin!4v1736139666036!5m2!1sta!2sin"
+            ]
+        },
+        // third hotel
+        3: {
+            title: "moonlit Abode Cottage",
+            points: [
+                {
+                    heading: "Hotel Overview",
+                    items: [
+                        "Location: Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
+                        "Setting: Nestled beside a stream, providing a tranquil environment close to nature."
+                    ]
+                },
+                {
+                    heading: "Room Types & Features",
+                    items: [
+                        "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
+                        "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
+                        "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
+                        "Common Amenities:",
+                        [
+                            "Television",
+                            "Free Wi-Fi",
+                            "Attached bathroom",
+                            "Seating area",
+                            "Daily housekeeping",
+                            "24-hour room service"
+                        ]
+                    ]
+                },
+                {
+                    heading: "Dining Options",
+                    items: [
+                        "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
+                        "Garden Restaurant: An open-air dining experience amidst nature.",
+                        "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day."
+                    ]
+                },
+                {
+                    heading: "Amenities & Services",
+                    items: [
+                        "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
+                        "Housekeeping: Daily housekeeping to maintain cleanliness.",
+                        "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
+                        "Taxi Service: Available for guest convenience.",
+                        "Deluxe Room: Bonfire & Barbecue: Organized upon request, ideal for group gatherings."
+                    ]
+                },
+              
+            ],
+            images: [
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
+            ],
+            mapDetails: [
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9035418918747!2d77.4730344!3d10.2693555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767f22a59a963%3A0x53d728470a3ccd4a!2sMoonlit%20Abode!5e0!3m2!1sen!2sin!4v1746259441814!5m2!1sen!2sin"
+            ]
+        },
+        // fourth Hotel
+        4: {
+            title: "Rainbow Cottage",
+            points: [
+                {
+                    heading: "Hotel Overview",
+                    items: [
+                        "Location: Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
+                        "Setting: Nestled beside a stream, providing a tranquil environment close to nature."
+                    ]
+                },
+                {
+                    heading: "Room Types & Features",
+                    items: [
+                        "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
+                        "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
+                        "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
+                        "Common Amenities:",
+                        [
+                            "Television",
+                            "Free Wi-Fi",
+                            "Attached bathroom",
+                            "Seating area",
+                            "Daily housekeeping",
+                            "24-hour room service"
+                        ]
+                    ]
+                },
+                {
+                    heading: "Dining Options",
+                    items: [
+                        "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
+                        "Garden Restaurant: An open-air dining experience amidst nature.",
+                        "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day."
+                    ]
+                },
+                {
+                    heading: "Amenities & Services",
+                    items: [
+                        "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
+                        "Housekeeping: Daily housekeeping to maintain cleanliness.",
+                        "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
+                        "Taxi Service: Available for guest convenience.",
+                        "Deluxe Room: Bonfire & Barbecue: Organized upon request, ideal for group gatherings."
+                    ]
+                },
+              
+            ],
+            images: [
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
+            ],
+            mapDetails: [
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.14748181373!2d77.508517!3d10.249687000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767003ac2ddc3%3A0x2b17829d1aa1152f!2sRainbow%20Cottage!5e0!3m2!1sen!2sin!4v1746259779857!5m2!1sen!2sin"
+            ]
+        },
+        // fifth Hotel
+        5: {
+            title: "Serenity Stay Cottage",
+            points: [
+                {
+                    heading: "Hotel Overview",
+                    items: [
+                        "Location: Situated approximately 1 KM from Kodaikanal's city center, offering easy access to local attractions such as Bryant Park and Kodaikanal Lake.",
+                        "Setting: Nestled beside a stream, providing a tranquil environment close to nature."
+                    ]
+                },
+                {
+                    heading: "Room Types & Features",
+                    items: [
+                        "Standard Room: Queen bed, basic amenities, suitable for budget travelers.",
+                        "Deluxe Room: Double bed, includes a fireplace and balcony for enhanced comfort.",
+                        "Luxury Room: Garden view, equipped with a heater, daily housekeeping, and free Wi-Fi.",
+                        "Common Amenities:",
+                        [
+                            "Television",
+                            "Free Wi-Fi",
+                            "Attached bathroom",
+                            "Seating area",
+                            "Daily housekeeping",
+                            "24-hour room service"
+                        ]
+                    ]
+                },
+                {
+                    heading: "Dining Options",
+                    items: [
+                        "On-site Restaurant: Offers a variety of cuisines including Chinese, Continental, and traditional dishes.",
+                        "Garden Restaurant: An open-air dining experience amidst nature.",
+                        "24-Hour Coffee Shop: Serves snacks, coffee, and tea throughout the day."
+                    ]
+                },
+                {
+                    heading: "Amenities & Services",
+                    items: [
+                        "Parking: Ample parking space available, accommodating even larger vehicles like buses.",
+                        "Housekeeping: Daily housekeeping to maintain cleanliness.",
+                        "Travel Desk: Assists with travel arrangements and local sightseeing tours.",
+                        "Taxi Service: Available for guest convenience.",
+                        "Deluxe Room: Bonfire & Barbecue: Organized upon request, ideal for group gatherings."
+                    ]
+                },
+              
+            ],
+            images: [
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg",
+                "images/silverspring1.jpg", "images/silverspring2.jpg", "images/silverspring3.jpg", "images/silverspring4.jpg"
+            ],
+            mapDetails: [
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.09629386063!2d77.4784811!3d10.2538173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767e4f699f20b%3A0x6c987facf282fba4!2sSerenity%20Stay!5e0!3m2!1sen!2sin!4v1746259689730!5m2!1sen!2sin"         ]
+        },
+        
+    };
+
+    if (posts[postId]) {
+        const post = posts[postId];
+
+        // Set the title
+        const singleposttitle = document.querySelector(".single-post-head");
+        singleposttitle.textContent = post.title;
+
+        // Container where points will be created dynamically
+        const contentContainer = document.querySelector(".single-post-content");
+        contentContainer.innerHTML = ""; // clear old contents if any
+
+        post.points.forEach(section => {
+            // Create heading
+            const heading = document.createElement("h2");
+            heading.classList.add("single-post-content-head");
+            heading.textContent = section.heading;
+            contentContainer.appendChild(heading);
+
+            // Create UL
+            const ul = document.createElement("ul");
+            ul.classList.add("single-post-content-ul");
+            section.items.forEach(item => {
+                if (Array.isArray(item)) {
+                    const nestedUl = document.createElement("ul");
+                    item.forEach(nestedItem => {
+                        const nestedLi = document.createElement("li");
+                        nestedLi.classList.add("single-post-content-li");
+                        nestedLi.textContent = nestedItem;
+                        nestedUl.appendChild(nestedLi);
+                    });
+                    ul.appendChild(nestedUl);
+                } else {
+                    const li = document.createElement("li");
+                    li.classList.add("single-post-content-inside-li");
+                    li.textContent = item;
+                    ul.appendChild(li);
+                }
+            });
+
+            contentContainer.appendChild(ul);
+        });
+
+        // map details
+        const mapid= document.querySelector(".single-post-map");
+        mapid.innerHTML = "";
+        post.mapDetails.forEach(mapUrl =>{
+            const iframe = document.createElement("iframe");
+            iframe.classList.add("single-post-map");
+            iframe.src= mapUrl;
+            iframe.width = "500px";
+            iframe.Height = "500px";
+            iframe.style.border = "0";
+            iframe.allowFullscreen = "";
+            iframe.loading = "lazy";
+            iframe.referrerpolicy="no-referrer-when-downgrade";
+            mapid.appendChild(iframe);
+        });
+        // map details end
+        // Image Slider
+        const slidercontainer = document.querySelector(".slider-container");
+        slidercontainer.innerHTML = ""; // clear previous images
+        post.images.forEach(image => {
+            const img = document.createElement("img");
+            img.src = image;
+            slidercontainer.appendChild(img);
+        });
+    }
 }
 
-if (posts[postId]) {
-    const post = posts[postId];
-    
-    const singleposttitle = document.querySelector(".single-post-head")
-      singleposttitle.textContent = post.title;
-    //  this term is heading  
-    document.querySelector(".single-post-content-head1").textContent = post.contentposthead1;
-    document.querySelector(".single-post-content-head2").textContent = post.contentposthead2;
-    document.querySelector(".single-post-content-head3").textContent = post.contentposthead3;
-    document.querySelector(".single-post-content-head4").textContent = post.contentposthead4;
-    document.querySelector(".single-post-content-head5").textContent = post.contentposthead5;
-
-    // first point Content
-    document.querySelector(".ul1-li1").textContent = post.contentInsidePointul1One;
-    document.querySelector(".ul1-li2").textContent = post.contentInsidePointul1Two;           
-    
-    // second point content
-    document.querySelector(".ul2-li1").textContent = post.contentInsidePointul2One;
-    document.querySelector(".ul2-li2").textContent = post.contentInsidePointul2Two;
-    document.querySelector(".ul2-li3").textContent = post.contentInsidePointul2Three;
-    document.querySelector(".ul2-li4").textContent = post.contentInsidePointul2_Four;
-    document.querySelector(".ul2-ul1-li1").textContent = post.contentInsidePointul2_ul1_One;
-    document.querySelector(".ul2-ul1-li2").textContent = post.contentInsidePointul2_ul1_Two;
-    document.querySelector(".ul2-ul1-li3").textContent = post.contentInsidePointul2_ul1_Three;
-    document.querySelector(".ul2-ul1-li4").textContent = post.contentInsidePointul2_ul1_Four;
-    document.querySelector(".ul2-ul1-li5").textContent = post.contentInsidePointul2_ul1_Five;
-    document.querySelector(".ul2-ul1-li6").textContent = post.contentInsidePointul2_ul1_Six;
-    
-    // third point content
-    document.querySelector(".ul3-li1").textContent = post.contentInsidePointul3One;
-    document.querySelector(".ul3-li2").textContent = post.contentInsidePointul3Two;
-    document.querySelector(".ul3-li3").textContent = post.contentInsidePointul3Three; 
-
-    // fourth points
-    document.querySelector(".ul4-li1").textContent = post.contentInsidePointul4One;
-    document.querySelector(".ul4-li2").textContent = post.contentInsidePointul4Two;
-    document.querySelector(".ul4-li3").textContent = post.contentInsidePointul3Three;
-    document.querySelector(".ul4-li4").textContent = post.contentInsidePointul4Four;
-    document.querySelector(".ul4-li5").textContent = post.contentInsidePointul4Five;
-    
-    // fifth points
-    document.querySelector(".ul5-li1").textContent = post.contentInsidePointul5One;    
-     
-    const slidercontainer = document.querySelector(".slider-container");
-    
-    post.images.forEach(image=> {
-        const img = document.createElement("img");
-        img.src = image;
-        slidercontainer.appendChild(img)
-    });
-}
-
-}
-
-
-// single post session end 
+ // single post session end

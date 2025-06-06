@@ -24,9 +24,9 @@ ContactButton.addEventListener("click",function(event){
         dataFrame[input.name] = input.value
     })
     console.log(dataFrame);
+    alert("Datas Send");
     setTimeout(()=>{
-        window.location.reload();
-    },3000);
-   
-})
+      window.location.reload()
+    },2000);
+});
 // contact session end 

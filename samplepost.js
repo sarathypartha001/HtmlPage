@@ -197,6 +197,19 @@ window.onload = function () {
             ],
             mapDetails: [
                 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9035418918747!2d77.4730344!3d10.2693555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767f22a59a963%3A0x53d728470a3ccd4a!2sMoonlit%20Abode!5e0!3m2!1sen!2sin!4v1746259441814!5m2!1sen!2sin"
+            ],
+            feedbackquestions: [
+                {
+                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    questions: [
+                        { question: "Was the check-in process smooth and timely?", type: "yesno" },
+                        { question: "Was your room clean and well-maintained?", type: "yesno" },
+                        { question: "How would you rate the comfort of the room?", type: "options", options: ["Excellent", "Good", "Average", "Poor"] },
+                        { question: "Was hot water available when needed?", type: "yesno" },
+                        { question: "Was the cottage location convenient for sightseeing?", type: "yesno" },
+                        { question: "Overall, how would you rate your stay?", type: "stars" }
+                    ]
+                }
             ]
         },
         // fourth Hotel
@@ -315,7 +328,6 @@ window.onload = function () {
         const singleposttitle = document.querySelector(".single-post-head");
         singleposttitle.textContent = post.title;
 
-        // Container where points will be created dynamically
         const contentContainer = document.querySelector(".single-post-content");
         contentContainer.innerHTML = "";
 
@@ -382,7 +394,141 @@ window.onload = function () {
             img.src = image;
             slidercontainer.appendChild(img);
         });
-    }
+        
+        // Feedback section
+        const feedbackContainer = document.querySelector(".single-post-feedback");
+        feedbackContainer.innerHTML = "";
+        
+        if (post.feedbackquestions && post.feedbackquestions.length > 0) {
+          const form = document.createElement("form");
+          form.id = "feedbackForm";
+        
+          post.feedbackquestions.forEach(feedback => {
+            // Feedback section heading
+            const heading = document.createElement("h2");
+            heading.classList.add("single-post-feedback-head");
+            heading.textContent = feedback.heading;
+            form.appendChild(heading);
+        
+            feedback.questions.forEach((q, index) => {
+              const questionEl = document.createElement("div");
+              questionEl.classList.add("feedback-question");
+        
+              // Question label
+              const label = document.createElement("label");
+              label.textContent = q.question;
+              label.setAttribute("for", `q${index}`);
+              questionEl.appendChild(label);
+        
+              // Render input types
+              if (q.type === "yesno") {
+                ["Yes", "No"].forEach(opt => {
+                  const input = document.createElement("input");
+                  input.type = "radio";
+                  input.name = `q${index}`;
+                  input.value = opt;
+                  input.id = `q${index}-${opt.toLowerCase()}`;
+                  input.required = true;
+        
+                  const span = document.createElement("span");
+                  span.textContent = opt;
+        
+                  questionEl.appendChild(input);
+                  questionEl.appendChild(span);
+                });
+        
+              } else if (q.type === "options") {
+                q.options.forEach(opt => {
+                  const input = document.createElement("input");
+                  input.type = "radio";
+                  input.name = `q${index}`;
+                  input.value = opt;
+                  input.id = `q${index}-${opt.replace(/\s+/g, '-').toLowerCase()}`;
+                  input.required = true;
+        
+                  const span = document.createElement("span");
+                  span.textContent = opt;
+        
+                  questionEl.appendChild(input);
+                  questionEl.appendChild(span);
+                });
+        
+              } else if (q.type === "stars") {
+                const starWrapper = document.createElement("div");
+                starWrapper.classList.add("star-rating");
+                for (let i = 5; i >= 1; i--) {
+                  const input = document.createElement("input");
+                  input.type = "radio";
+                  input.name = `q${index}`;
+                  input.value = `${i} Star`;
+                  input.id = `star${i}-${index}`;
+                  input.required = true;
+        
+                  const starLabel = document.createElement("label");
+                  starLabel.setAttribute("for", `star${i}-${index}`);
+                  starLabel.title = `${i} star`;
+                  starLabel.textContent = "★";
+        
+                  starWrapper.appendChild(input);
+                  starWrapper.appendChild(starLabel);
+                }
+                questionEl.appendChild(starWrapper);
+              }
+        
+              form.appendChild(questionEl);
+            });
+          });
+        
+          // Submit Button
+          const submitBtn = document.createElement("button");
+          submitBtn.type = "submit";
+          submitBtn.textContent = "Submit Feedback";
+          submitBtn.classList.add("submit-feedback-btn");
+          form.appendChild(submitBtn);
+        
+          // Success message div
+          const thankYou = document.createElement("div");
+          thankYou.classList.add("thank-you-message");
+          thankYou.style.display = "none";
+          thankYou.textContent = "✅ Thank you for your feedback!";
+          feedbackContainer.appendChild(thankYou);
+        
+          feedbackContainer.appendChild(form);
+        
+          // Handle form submit
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+        
+            const formData = new FormData(form);
+            const feedbackData = [];
+        
+            formData.forEach((value, key) => {
+              feedbackData.push(`${key}: ${value}`);
+            });
+        
+            const message = feedbackData.join("\n");
+        
+            // Send Email via FormSubmit.co
+            fetch("https://formsubmit.co/ajax/parthasarathya001@gmail.com", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: JSON.stringify({
+                _subject: "New Cottage Feedback",
+                message: message
+              })
+            })
+              .then(response => response.json())
+              .then(data => {
+                form.style.display = "none";
+                thankYou.style.display = "block";
+              })
+              .catch(error => alert("Error sending feedback. Please try again."));
+          });
+        }
+    }        
 }
 
  // single post session end

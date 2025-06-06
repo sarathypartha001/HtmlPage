@@ -1,133 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/icons/living-room.png" />
-    <title>Kodaikanal Room Booking</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kodaikanal Room Booking</title>
+
+  <link rel="icon" type="image/png" href="images/icons/living-room.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
-    <!-- header session -->
-    <header id="Header">
-      <div id="nav">
-        <h2 class="header-head"><a href="index.html">Hotel Booking</a></h2>
-        <h2 class="header-head--media"><a href="tel:7904260342">Hotel Booking <i class="fa-sharp fa-solid fa-phone-volume" id="header-head-icons"></i></a></h2>
-        <ul class="header-links">
-          <p class="header-links-inside"><a href="index.html">Home</a></p>
-          <p class="header-links-inside"><a href="about.html">About</a></p>
-          <p class="header-links-inside"><a href="contact.html">Contact</a></p>
-        </ul>
-        <h4 class="header-head-contact"><a href="tel:7904260342"><i class="fa-sharp fa-solid fa-phone-volume" id="header-contact-icons"></i>7904260342</a></h4>
-        <ion-icon class="menu-bar-opentag" name="keypad"></ion-icon>
-      </div>
-    </header>
-    <!-- header session end-->
-
-     <!-- side nav bar -->
-    <div id="side-nav-bar">
-      <div id="side-nav">
-        <p class="side-nav-closebar"><i class="fa-solid fa-xmark"></i></p>
-
-         <ul class="sidenav-links">
-           <p class="sidenav-links-inside"><a href="index.html">Home</a></p>
-           <p class="sidenav-links-inside"><a href="about.html">About</a></p>
-           <p class="sidenav-links-inside"><a href="contact.html">Contact</a></p>
-         </ul>
-     </div>
+  <!-- Header -->
+  <header id="Header">
+    <div id="nav">
+      <h2 class="header-head"><a href="index.html">Hotel Booking</a></h2>
+      <h2 class="header-head--media">
+        <a href="tel:7904260342">Hotel Booking <i class="fa-solid fa-phone-volume" id="header-head-icons"></i></a>
+      </h2>
+      <ul class="header-links">
+        <p class="header-links-inside"><a href="index.html">Home</a></p>
+        <p class="header-links-inside"><a href="about.html">About</a></p>
+        <p class="header-links-inside"><a href="contact.html">Contact</a></p>
+      </ul>
+      <h4 class="header-head-contact">
+        <a href="tel:7904260342"><i class="fa-solid fa-phone-volume" id="header-contact-icons"></i>7904260342</a>
+      </h4>
+      <ion-icon class="menu-bar-opentag" name="keypad"></ion-icon>
     </div>
-    <!-- side nav bar end -->
+  </header>
 
-    <!-- home page session -->
-     <div id="home-session">
-        <div class="home-image">
-          <img class="home-slider-img-arow home-slide-left"  src="images/icons/left-arrow.png">
-           <button class="home-btn"><a href="https://Wa.me/917904260342">Book Now</a></button>
-           <div class="home-slide-btn">
-            
-            <input type="radio" name="radios" id="radio1" >
-            <input type="radio" name="radios" id="radio2" >
-            <input type="radio" name="radios" id="radio3" >
-            <input type="radio" name="radios" id="radio4" >
-            <input type="radio" name="radios" id="radio5" >
-            <input type="radio" name="radios" id="radio6" >
-          </div>       
-          <img class="home-slider-img-arow home-slide-right" src="images/icons/right-arrow.png">
-        </div>
-     </div>
+  <!-- Side Navigation -->
+  <div id="side-nav-bar">
+    <div id="side-nav">
+      <p class="side-nav-closebar"><i class="fa-solid fa-xmark"></i></p>
+      <ul class="sidenav-links">
+        <p class="sidenav-links-inside"><a href="index.html">Home</a></p>
+        <p class="sidenav-links-inside"><a href="about.html">About</a></p>
+        <p class="sidenav-links-inside"><a href="contact.html">Contact</a></p>
+      </ul>
+    </div>
+  </div>
 
-     <!-- home session end -->
-      <!-- posts session -->
-      <div class="post-session">
-        <div class="posts">
-           <div class="post-edit" id="post-edit-1">
-             <a class="post-img" href="samplepost.html?id=1"><img src="images/silverspring.jpg" alt="Hotal Sliverspring">
-             <h3 class="post-head">Hotel Silver Springs</h3>
-             <p class="post-mini-para">Silver Spring Hotel in Kodaikanal provides elegant rooms, scenic surroundings, top-notch facilities, friendly staff, and a perfect getaway experience.</p>
-             <button class="post-btn">Read More</button></a>
-           </div>
-           <div class="post-edit" id="post-edit-1">
-            <a class="post-img" href="samplepost.html?id=2"><img src="images/summarpalace.jpeg" alt="summerpalace">
-            <h3 class="post-head">Hotel Summer Palace</h3>
-            <p class="post-mini-para">Hotel Summer Palace in Kodaikanal is a serene retreat offering comfortable accommodations and picturesque surroundings, perfect for relaxation and rejuvenation.</p>
-            <button class="post-btn">Read More</button></a>
-          </div>
-          <div class="post-edit" id="post-edit-1">
-            <a class="post-img" href="samplepost.html?id=3"><img src="images/moonlit5.jpeg" alt="Moonlit abode">
-            <h3 class="post-head">moonlit Abode Cottage</h3>
-            <p class="post-mini-para">Moonlit Abode Cottage provides a serene environment with cozy rooms, breathtaking mountain views, and friendly hosts ensuring a delightful stay.</p>
-            <button class="post-btn">Read More</button></a>
-          </div>
-          <div class="post-edit" id="post-edit-1">
-            <a class="post-img" href="samplepost.html?id=4"><img src="images/rainbow cottage 2.jpeg" alt="rainbow cottage">
-            <h3 class="post-head">Rainbow Cottage</h3>
-            <p class="post-mini-para">Rainbow Cottage in Kodaikanal is a perfect budget-friendly option offering clean rooms, friendly service, and a warm, welcoming atmosphere.</p>
-            <button class="post-btn">Read More</button></a>
-          </div>
-          <div class="post-edit" id="post-edit-1">
-            <a class="post-img" href="samplepost.html?id=5"><img src="images/backgroundimg.jpg" alt="Hotal Sliverspring">
-            <h3 class="post-head">Serenity Stay Cottage</h3>
-            <p class="post-mini-para">Serenity stay Cottage in Kodaikanal provides elegant Cottage, scenic surroundings, top-notch facilities, friendly staff, and a perfect getaway experience.</p>
-            <button class="post-btn">Read More</button></a>
-          </div>
-        </div>
+  <!-- Home Section -->
+  <div id="home-session">
+    <div class="home-image">
+      <img class="home-slider-img-arow home-slide-left" src="images/icons/left-arrow.png" />
+      <button class="home-btn"><a href="https://Wa.me/917904260342">Book Now</a></button>
+      <div class="home-slide-btn">
+        <input type="radio" name="radios" id="radio1" />
+        <input type="radio" name="radios" id="radio2" />
+        <input type="radio" name="radios" id="radio3" />
+        <input type="radio" name="radios" id="radio4" />
+        <input type="radio" name="radios" id="radio5" />
+        <input type="radio" name="radios" id="radio6" />
       </div>
-     
-      <!-- posts session end -->      
-      <!-- footer  -->
-       <footer>
-         <div class="footer">
-            <h3 class="footer-head-links">Kodaikanal Luxury Rooms</h3>
-            <p class="footer-contact-link">
-              <a class="footer-links" href="https://Wa.me/917904260342">7904260342</a>,
-              <a class="footer-links" href="https://Wa.me/919361001780">9361001780</a>
-            </p>
-            <div class="footer-contact-link">
-              <a href="mailto:sarathyp212@gmail.com" class="footer-links">Sarathyp212@gmail.com</a>
-            </div>
-            <div class="footer-logo">
-               <img src="images/icons/facebook.png" class="Footer-logo-img"/>
-               <img src="images/icons/instagram.png" class="Footer-logo-img"/>
-               <img src="images/icons/twitter.png" class="Footer-logo-img"/>
-               <img src="images/icons/youtube.png" class="Footer-logo-img"/>
-            </div>
-            <p class="footer-copyright">Copyright © 2025 kodaikanalhotelbooking | All rights reserved</p>
-          </div>
-          <div class="whatsapp-logo">
-            <a href="https://Wa.me/917904260342"><i class="fa-brands fa-square-whatsapp" style="color: #59ff00;" id="whatsapp-icons"></i></a>
-           </div>
-       </footer>
-      <!-- footer end  -->
-    <script src="script.js"></script>
+      <img class="home-slider-img-arow home-slide-right" src="images/icons/right-arrow.png" />
+    </div>
+  </div>
+
+  <!-- Posts Section -->
+  <div class="post-session">
+    <div class="posts">
+      <div class="post-edit">
+        <a class="post-img" href="samplepost.html?id=1">
+          <img src="images/silverspring.jpg" alt="Hotel Silver Spring" />
+          <h3 class="post-head">Hotel Silver Springs</h3>
+          <p class="post-mini-para">Silver Spring Hotel in Kodaikanal provides elegant rooms, scenic surroundings, top-notch facilities, friendly staff, and a perfect getaway experience.</p>
+          <button class="post-btn">Read More</button>
+        </a>
+      </div>
+      <div class="post-edit">
+        <a class="post-img" href="samplepost.html?id=2">
+          <img src="images/summarpalace.jpeg" alt="Hotel Summer Palace" />
+          <h3 class="post-head">Hotel Summer Palace</h3>
+          <p class="post-mini-para">Hotel Summer Palace in Kodaikanal is a serene retreat offering comfortable accommodations and picturesque surroundings, perfect for relaxation and rejuvenation.</p>
+          <button class="post-btn">Read More</button>
+        </a>
+      </div>
+      <div class="post-edit">
+        <a class="post-img" href="samplepost.html?id=3">
+          <img src="images/moonlit5.jpeg" alt="Moonlit Abode" />
+          <h3 class="post-head">Moonlit Abode Cottage</h3>
+          <p class="post-mini-para">Moonlit Abode Cottage provides a serene environment with cozy rooms, breathtaking mountain views, and friendly hosts ensuring a delightful stay.</p>
+          <button class="post-btn">Read More</button>
+        </a>
+      </div>
+      <div class="post-edit">
+        <a class="post-img" href="samplepost.html?id=4">
+          <img src="images/rainbow cottage 2.jpeg" alt="Rainbow Cottage" />
+          <h3 class="post-head">Rainbow Cottage</h3>
+          <p class="post-mini-para">Rainbow Cottage in Kodaikanal is a perfect budget-friendly option offering clean rooms, friendly service, and a warm, welcoming atmosphere.</p>
+          <button class="post-btn">Read More</button>
+        </a>
+      </div>
+      <div class="post-edit">
+        <a class="post-img" href="samplepost.html?id=5">
+          <img src="images/backgroundimg.jpg" alt="Serenity Stay Cottage" />
+          <h3 class="post-head">Serenity Stay Cottage</h3>
+          <p class="post-mini-para">Serenity Stay Cottage in Kodaikanal provides elegant cottages, scenic surroundings, top-notch facilities, friendly staff, and a perfect getaway experience.</p>
+          <button class="post-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <h3 class="footer-head-links">Kodaikanal Luxury Rooms</h3>
+      <p class="footer-contact-link">
+        <a class="footer-links" href="https://Wa.me/917904260342">7904260342</a>,
+        <a class="footer-links" href="https://Wa.me/919361001780">9361001780</a>
+      </p>
+      <div class="footer-contact-link">
+        <a href="mailto:sarathyp212@gmail.com" class="footer-links">Sarathyp212@gmail.com</a>
+      </div>
+      <div class="footer-logo">
+        <img src="images/icons/facebook.png" class="Footer-logo-img" />
+        <img src="images/icons/instagram.png" class="Footer-logo-img" />
+        <img src="images/icons/twitter.png" class="Footer-logo-img" />
+        <img src="images/icons/youtube.png" class="Footer-logo-img" />
+      </div>
+      <p class="footer-copyright">
+        © 2025 kodaikanalhotelbooking | All rights reserved
+      </p>
+    </div>
+    <div class="whatsapp-logo">
+      <a href="https://Wa.me/917904260342">
+        <i class="fa-brands fa-square-whatsapp" style="color: #59ff00;" id="whatsapp-icons"></i>
+      </a>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>

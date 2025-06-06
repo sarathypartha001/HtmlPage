@@ -321,7 +321,183 @@ header{
 #whatsapp-icons:hover{
     transform: scale(1.2);
 }
+
 /* whatsapp logo end */
+/* Feedback Heading */
+.single-post-feedback-head {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    border-bottom: 3px solid #0078d7;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    animation: slideInFromLeft 0.7s ease forwards;
+  }
+  
+  /* Animate heading slide in */
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Question container */
+  .feedback-question {
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* Stagger fade in for each question */
+  .feedback-question:nth-child(1) { animation-delay: 0.1s; }
+  .feedback-question:nth-child(2) { animation-delay: 0.3s; }
+  .feedback-question:nth-child(3) { animation-delay: 0.5s; }
+  .feedback-question:nth-child(4) { animation-delay: 0.7s; }
+  .feedback-question:nth-child(5) { animation-delay: 0.9s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Label styling */
+  .feedback-question label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #222;
+    user-select: none;
+  }
+  
+  /* Visible Radio Inputs (circle style) */
+  .feedback-question input[type="radio"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 2px solid #0078d7;
+    border-radius: 50%;
+    background: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+  }
+  
+  /* Radio checked indicator */
+  .feedback-question input[type="radio"]:checked {
+    background-color: #0078d7;
+    border-color: #005a9e;
+  }
+  
+  /* Label text next to radio */
+  .feedback-question span {
+    font-size: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    color: #333;
+    margin-right: 20px;
+    display: inline-block;
+  }
+  
+  /* Star rating styles (visible stars, simpler) */
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  
+  .star-rating input[type="radio"] {
+    width: 28px;
+    height: 28px;
+    border-radius: 0;
+    border: none;
+    display: none; /* keep hidden for star inputs */
+  }
+  
+  .star-rating label {
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #ffc107;
+  }
+  
+  /* Submit button */
+  .submit-feedback-btn {
+    background-color: #0078d7;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 30px auto 0;
+    user-select: none;
+  }
+  
+  .submit-feedback-btn:hover {
+    background-color: #005a9e;
+    transform: scale(1.05);
+  }
+  
+  /* Thank you message */
+  .thank-you-message {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #0078d7;
+    margin-top: 24px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    .feedback-question label {
+      font-size: 1rem;
+    }
+    .star-rating label {
+      font-size: 24px;
+    }
+    .submit-feedback-btn {
+      width: 90%;
+      padding: 14px 0;
+    }
+  }
+  
+  
+
 
 
 /* footer */

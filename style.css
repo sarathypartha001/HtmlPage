@@ -7,8 +7,8 @@ body{
     background-color: whitesmoke;
     overflow-x: hidden;
     font-family: 'poppins', sans-serif;
-    transition: 5s;
 }
+
 /* header session */
 header{
     top: 0;
@@ -121,7 +121,7 @@ header{
 /* side nav end  */
 /* Home session */
 #home-session{
-    margin: 50px 1px 1px 1px;
+    margin: 80px 10px 10px 10px;
 }
 .home-image{
     background-image: url("images/background1.jpg");
@@ -175,13 +175,11 @@ header{
 .home-slider-img-arow:hover{
     background-color: blue;
 }
-.home-slide-right{
-    right: 3%;
-    transform: translate(-3%);
-}
 .home-slide-left{
     left: 3%;
-    transform: translate(-3%);
+}
+.home-slide-right{
+    right: 3%;
 }
 
 .home-btn{
@@ -233,9 +231,6 @@ header{
     overflow: hidden;
     background: #fdfdfd;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.post-edit {
     opacity: 0; 
     transform: translateX(50px);
     transition: all 0.9s ease-out;

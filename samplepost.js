@@ -502,7 +502,7 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
                 Accept: "application/json"
             },
             body: JSON.stringify({
-                _subject: "New Cottage Feedback",
+                _subject: post.feedbackquestions[0].heading,
                 message: message
             })
         })

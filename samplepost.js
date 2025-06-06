@@ -397,138 +397,124 @@ window.onload = function () {
         
         // Feedback section
         const feedbackContainer = document.querySelector(".single-post-feedback");
-        feedbackContainer.innerHTML = "";
-        
-        if (post.feedbackquestions && post.feedbackquestions.length > 0) {
-          const form = document.createElement("form");
-          form.id = "feedbackForm";
-        
-          post.feedbackquestions.forEach(feedback => {
-            // Feedback section heading
-            const heading = document.createElement("h2");
-            heading.classList.add("single-post-feedback-head");
-            heading.textContent = feedback.heading;
-            form.appendChild(heading);
-        
-            feedback.questions.forEach((q, index) => {
-              const questionEl = document.createElement("div");
-              questionEl.classList.add("feedback-question");
-        
-              // Question label
-              const label = document.createElement("label");
-              label.textContent = q.question;
-              label.setAttribute("for", `q${index}`);
-              questionEl.appendChild(label);
-        
-              // Render input types
-              if (q.type === "yesno") {
-                ["Yes", "No"].forEach(opt => {
-                  const input = document.createElement("input");
-                  input.type = "radio";
-                  input.name = `q${index}`;
-                  input.value = opt;
-                  input.id = `q${index}-${opt.toLowerCase()}`;
-                  input.required = true;
-        
-                  const span = document.createElement("span");
-                  span.textContent = opt;
-        
-                  questionEl.appendChild(input);
-                  questionEl.appendChild(span);
+feedbackContainer.innerHTML = "";
+
+if (post.feedbackquestions && post.feedbackquestions.length > 0) {
+    const form = document.createElement("form");
+    form.id = "feedbackForm";
+
+    const questionData = []; // Store {question, name} mapping
+
+    post.feedbackquestions.forEach(feedback => {
+        const heading = document.createElement("h2");
+        heading.classList.add("single-post-feedback-head");
+        heading.textContent = feedback.heading;
+        form.appendChild(heading);
+
+        feedback.questions.forEach((q, index) => {
+            const questionEl = document.createElement("div");
+            questionEl.classList.add("feedback-question");
+
+            const label = document.createElement("label");
+            label.textContent = q.question;
+            label.setAttribute("for", `q${index}`);
+            questionEl.appendChild(label);
+
+            questionData.push({ name: `q${index}`, question: q.question });
+
+            if (q.type === "yesno" || q.type === "options") {
+                const options = q.type === "yesno" ? ["Yes", "No"] : q.options;
+                options.forEach(opt => {
+                    const label = document.createElement("label");
+
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = `q${index}`;
+                    input.value = opt;
+                    input.required = true;
+
+                    label.appendChild(input);
+                    label.append(" " + opt);
+                    questionEl.appendChild(label);
                 });
-        
-              } else if (q.type === "options") {
-                q.options.forEach(opt => {
-                  const input = document.createElement("input");
-                  input.type = "radio";
-                  input.name = `q${index}`;
-                  input.value = opt;
-                  input.id = `q${index}-${opt.replace(/\s+/g, '-').toLowerCase()}`;
-                  input.required = true;
-        
-                  const span = document.createElement("span");
-                  span.textContent = opt;
-        
-                  questionEl.appendChild(input);
-                  questionEl.appendChild(span);
-                });
-        
-              } else if (q.type === "stars") {
+            } else if (q.type === "stars") {
                 const starWrapper = document.createElement("div");
                 starWrapper.classList.add("star-rating");
                 for (let i = 5; i >= 1; i--) {
-                  const input = document.createElement("input");
-                  input.type = "radio";
-                  input.name = `q${index}`;
-                  input.value = `${i} Star`;
-                  input.id = `star${i}-${index}`;
-                  input.required = true;
-        
-                  const starLabel = document.createElement("label");
-                  starLabel.setAttribute("for", `star${i}-${index}`);
-                  starLabel.title = `${i} star`;
-                  starLabel.textContent = "★";
-        
-                  starWrapper.appendChild(input);
-                  starWrapper.appendChild(starLabel);
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = `q${index}`;
+                    input.value = `${i} Star`;
+                    input.id = `star${i}-${index}`;
+                    input.required = true;
+
+                    const label = document.createElement("label");
+                    label.setAttribute("for", `star${i}-${index}`);
+                    label.title = `${i} star`;
+                    label.textContent = "★";
+
+                    starWrapper.appendChild(input);
+                    starWrapper.appendChild(label);
                 }
                 questionEl.appendChild(starWrapper);
-              }
-        
-              form.appendChild(questionEl);
-            });
-          });
-        
-          // Submit Button
-          const submitBtn = document.createElement("button");
-          submitBtn.type = "submit";
-          submitBtn.textContent = "Submit Feedback";
-          submitBtn.classList.add("submit-feedback-btn");
-          form.appendChild(submitBtn);
-        
-          // Success message div
-          const thankYou = document.createElement("div");
-          thankYou.classList.add("thank-you-message");
-          thankYou.style.display = "none";
-          thankYou.textContent = "✅ Thank you for your feedback!";
-          feedbackContainer.appendChild(thankYou);
-        
-          feedbackContainer.appendChild(form);
-        
-          // Handle form submit
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-        
-            const formData = new FormData(form);
-            const feedbackData = [];
-        
-            formData.forEach((value, key) => {
-              feedbackData.push(`${key}: ${value}`);
-            });
-        
-            const message = feedbackData.join("\n");
-        
-            // Send Email via FormSubmit.co
-            fetch("https://formsubmit.co/ajax/parthasarathya001@gmail.com", {
-              method: "POST",
-              headers: {
+            }
+
+            form.appendChild(questionEl);
+        });
+    });
+
+    // Submit Button
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "submit";
+    submitBtn.textContent = "Submit Feedback";
+    submitBtn.classList.add("submit-feedback-btn");
+    form.appendChild(submitBtn);
+
+    // Success Message
+    const thankYou = document.createElement("div");
+    thankYou.classList.add("thank-you-message");
+    thankYou.style.display = "none";
+    thankYou.textContent = "✅ Thank you for your feedback!";
+    feedbackContainer.appendChild(thankYou);
+
+    feedbackContainer.appendChild(form);
+
+    // Handle Form Submit
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const resultLines = [];
+
+        questionData.forEach(q => {
+            const value = formData.get(q.name);
+            if (value) {
+                resultLines.push(`${q.question}: ${value}`);
+            }
+        });
+
+        const message = resultLines.join("\n");
+
+        // Send to FormSubmit (no backend)
+        fetch("https://formsubmit.co/ajax/parthasarathya001@gmail.com", {
+            method: "POST",
+            headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json"
-              },
-              body: JSON.stringify({
+            },
+            body: JSON.stringify({
                 _subject: "New Cottage Feedback",
                 message: message
-              })
             })
-              .then(response => response.json())
-              .then(data => {
-                form.style.display = "none";
-                thankYou.style.display = "block";
-              })
-              .catch(error => alert("Error sending feedback. Please try again."));
-          });
-        }
-    }        
+        })
+        .then(response => response.json())
+        .then(data => {
+            form.style.display = "none";
+            thankYou.style.display = "block";
+        })
+        .catch(error => alert("Error sending feedback. Please try again."));
+    });
+}
+    }
 }
 
  // single post session end

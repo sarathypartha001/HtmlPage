@@ -121,7 +121,7 @@ header{
 /* side nav end  */
 /* Home session */
 #home-session{
-    margin: 80px 10px 10px 10px;
+    margin: 80px 1px 1px 1px;
 }
 .home-image{
     background-image: url("images/background1.jpg");
@@ -177,9 +177,11 @@ header{
 }
 .home-slide-left{
     left: 3%;
+    transform: translate(-3%);
 }
 .home-slide-right{
     right: 3%;
+    transform: translate(-3%);
 }
 
 .home-btn{

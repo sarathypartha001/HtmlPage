@@ -83,6 +83,19 @@ window.onload = function () {
             ],
             mapDetails: [
                 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.2668179192437!2d77.4960019!3d10.240051500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07665f9e994a6d%3A0x3192c2186e2583d2!2sHotel%20Silver%20Springs!5e0!3m2!1sen!2sin!4v1746259134383!5m2!1sen!2sin"
+            ],
+            feedbackquestions: [
+                {
+                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    questions: [
+                        { question: "Was the check-in process smooth and timely?", type: "yesno" },
+                        { question: "Was your room clean and well-maintained?", type: "yesno" },
+                        { question: "How would you rate the comfort of the room?", type: "options", options: ["Excellent", "Good", "Average", "Poor"] },
+                        { question: "Was hot water available when needed?", type: "yesno" },
+                        { question: "Was the cottage location convenient for sightseeing?", type: "yesno" },
+                        { question: "Overall, how would you rate your stay?", type: "stars" }
+                    ]
+                }
             ]
             },
         //  second Page
@@ -137,6 +150,19 @@ window.onload = function () {
             ],
             mapDetails: [
                 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.2793847514727!2d77.4958339!3d10.239036299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767ab31769d97%3A0xb2c4e386be959760!2sSummer%20Palace!5e0!3m2!1sta!2sin!4v1736139666036!5m2!1sta!2sin"
+            ],
+            feedbackquestions: [
+                {
+                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    questions: [
+                        { question: "Was the check-in process smooth and timely?", type: "yesno" },
+                        { question: "Was your room clean and well-maintained?", type: "yesno" },
+                        { question: "How would you rate the comfort of the room?", type: "options", options: ["Excellent", "Good", "Average", "Poor"] },
+                        { question: "Was hot water available when needed?", type: "yesno" },
+                        { question: "Was the cottage location convenient for sightseeing?", type: "yesno" },
+                        { question: "Overall, how would you rate your stay?", type: "stars" }
+                    ]
+                }
             ]
         },
         // third hotel
@@ -267,6 +293,19 @@ window.onload = function () {
             ],
             mapDetails: [
                 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.14748181373!2d77.508517!3d10.249687000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767003ac2ddc3%3A0x2b17829d1aa1152f!2sRainbow%20Cottage!5e0!3m2!1sen!2sin!4v1746259779857!5m2!1sen!2sin"
+            ],
+            feedbackquestions: [
+                {
+                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    questions: [
+                        { question: "Was the check-in process smooth and timely?", type: "yesno" },
+                        { question: "Was your room clean and well-maintained?", type: "yesno" },
+                        { question: "How would you rate the comfort of the room?", type: "options", options: ["Excellent", "Good", "Average", "Poor"] },
+                        { question: "Was hot water available when needed?", type: "yesno" },
+                        { question: "Was the cottage location convenient for sightseeing?", type: "yesno" },
+                        { question: "Overall, how would you rate your stay?", type: "stars" }
+                    ]
+                }
             ]
         },
         // fifth Hotel
@@ -317,7 +356,21 @@ window.onload = function () {
                 "images/silverspring1.jpg", "images/silverspring2.jpg"
             ],
             mapDetails: [
-                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.09629386063!2d77.4784811!3d10.2538173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767e4f699f20b%3A0x6c987facf282fba4!2sSerenity%20Stay!5e0!3m2!1sen!2sin!4v1746259689730!5m2!1sen!2sin"         ]
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.09629386063!2d77.4784811!3d10.2538173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0767e4f699f20b%3A0x6c987facf282fba4!2sSerenity%20Stay!5e0!3m2!1sen!2sin!4v1746259689730!5m2!1sen!2sin"         
+            ],
+            feedbackquestions: [
+                {
+                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    questions: [
+                        { question: "Was the check-in process smooth and timely?", type: "yesno" },
+                        { question: "Was your room clean and well-maintained?", type: "yesno" },
+                        { question: "How would you rate the comfort of the room?", type: "options", options: ["Excellent", "Good", "Average", "Poor"] },
+                        { question: "Was hot water available when needed?", type: "yesno" },
+                        { question: "Was the cottage location convenient for sightseeing?", type: "yesno" },
+                        { question: "Overall, how would you rate your stay?", type: "stars" }
+                    ]
+                }
+            ]
         },
     };
 
@@ -494,24 +547,29 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
 
         const message = resultLines.join("\n");
 
-        // Send to FormSubmit (no backend)
-        fetch("https://formsubmit.co/ajax/parthasarathya001@gmail.com", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: JSON.stringify({
-                _subject: post.feedbackquestions[0].heading,
-                message: message
-            })
+        const sendToEmails = ["parthasarathya001@gmail.com", "sarathyp212@gmail.com"];
+
+sendToEmails.forEach(email => {
+    fetch(`https://formsubmit.co/ajax/${email}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify({
+            _subject: post.feedbackquestions[0].heading,
+            message: message
         })
-        .then(response => response.json())
-        .then(data => {
-            form.style.display = "none";
-            thankYou.style.display = "block";
-        })
-        .catch(error => alert("Error sending feedback. Please try again."));
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(`Feedback sent to ${email}`);
+    })
+      .catch(error => alert(`Error sending feedback to ${email}.`));
+    });
+    form.style.display = "none";
+    thankYou.style.display = "block";
+
     });
 }
     }

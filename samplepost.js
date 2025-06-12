@@ -86,7 +86,7 @@ window.onload = function () {
             ],
             feedbackquestions: [
                 {
-                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    heading: "FeedBack About Hotel Silver Spring",
                     questions: [
                         { question: "Was the check-in process smooth and timely?", type: "yesno" },
                         { question: "Was your room clean and well-maintained?", type: "yesno" },
@@ -153,7 +153,7 @@ window.onload = function () {
             ],
             feedbackquestions: [
                 {
-                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    heading: "FeedBack About Hotel Summer Palace",
                     questions: [
                         { question: "Was the check-in process smooth and timely?", type: "yesno" },
                         { question: "Was your room clean and well-maintained?", type: "yesno" },
@@ -296,7 +296,7 @@ window.onload = function () {
             ],
             feedbackquestions: [
                 {
-                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    heading: "FeedBack About Rainbow Cottage",
                     questions: [
                         { question: "Was the check-in process smooth and timely?", type: "yesno" },
                         { question: "Was your room clean and well-maintained?", type: "yesno" },
@@ -360,7 +360,7 @@ window.onload = function () {
             ],
             feedbackquestions: [
                 {
-                    heading: "FeedBack About Moonlite Adobe Cottage",
+                    heading: "FeedBack About Serenity Stay Cottage",
                     questions: [
                         { question: "Was the check-in process smooth and timely?", type: "yesno" },
                         { question: "Was your room clean and well-maintained?", type: "yesno" },
@@ -449,14 +449,22 @@ window.onload = function () {
         });
         
         // Feedback section
-        const feedbackContainer = document.querySelector(".single-post-feedback");
+        // Feedback section
+const feedbackContainer = document.querySelector(".single-post-feedback");
 feedbackContainer.innerHTML = "";
 
-if (post.feedbackquestions && post.feedbackquestions.length > 0) {
+const hotelKey = `feedbackSubmitted_${postId}`; // ✅ Use postId instead of post.id
+
+if (localStorage.getItem(hotelKey) === "true") {
+    const thankYou = document.createElement("div");
+    thankYou.classList.add("thank-you-message");
+    thankYou.textContent = "✅ Thank you! You already submitted feedback for this hotel.";
+    feedbackContainer.appendChild(thankYou);
+} else if (post.feedbackquestions && post.feedbackquestions.length > 0) {
     const form = document.createElement("form");
     form.id = "feedbackForm";
 
-    const questionData = []; // Store {question, name} mapping
+    const questionData = [];
 
     post.feedbackquestions.forEach(feedback => {
         const heading = document.createElement("h2");
@@ -478,7 +486,7 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
             if (q.type === "yesno" || q.type === "options") {
                 const options = q.type === "yesno" ? ["Yes", "No"] : q.options;
                 options.forEach(opt => {
-                    const label = document.createElement("label");
+                    const optionLabel = document.createElement("label");
 
                     const input = document.createElement("input");
                     input.type = "radio";
@@ -486,9 +494,9 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
                     input.value = opt;
                     input.required = true;
 
-                    label.appendChild(input);
-                    label.append(" " + opt);
-                    questionEl.appendChild(label);
+                    optionLabel.appendChild(input);
+                    optionLabel.append(" " + opt);
+                    questionEl.appendChild(optionLabel);
                 });
             } else if (q.type === "stars") {
                 const starWrapper = document.createElement("div");
@@ -501,13 +509,13 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
                     input.id = `star${i}-${index}`;
                     input.required = true;
 
-                    const label = document.createElement("label");
-                    label.setAttribute("for", `star${i}-${index}`);
-                    label.title = `${i} star`;
-                    label.textContent = "★";
+                    const starLabel = document.createElement("label");
+                    starLabel.setAttribute("for", `star${i}-${index}`);
+                    starLabel.title = `${i} star`;
+                    starLabel.textContent = "★";
 
                     starWrapper.appendChild(input);
-                    starWrapper.appendChild(label);
+                    starWrapper.appendChild(starLabel);
                 }
                 questionEl.appendChild(starWrapper);
             }
@@ -516,25 +524,22 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
         });
     });
 
-    // Submit Button
     const submitBtn = document.createElement("button");
     submitBtn.type = "submit";
     submitBtn.textContent = "Submit Feedback";
     submitBtn.classList.add("submit-feedback-btn");
     form.appendChild(submitBtn);
 
-    // Success Message
     const thankYou = document.createElement("div");
     thankYou.classList.add("thank-you-message");
     thankYou.style.display = "none";
     thankYou.textContent = "✅ Thank you for your feedback!";
     feedbackContainer.appendChild(thankYou);
-
     feedbackContainer.appendChild(form);
 
-    // Handle Form Submit
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+
         const formData = new FormData(form);
         const resultLines = [];
 
@@ -546,30 +551,34 @@ if (post.feedbackquestions && post.feedbackquestions.length > 0) {
         });
 
         const message = resultLines.join("\n");
-
         const sendToEmails = ["parthasarathya001@gmail.com", "sarathyp212@gmail.com"];
 
-sendToEmails.forEach(email => {
-    fetch(`https://formsubmit.co/ajax/${email}`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-        },
-        body: JSON.stringify({
-            _subject: post.feedbackquestions[0].heading,
-            message: message
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(`Feedback sent to ${email}`);
-    })
-      .catch(error => alert(`Error sending feedback to ${email}.`));
-    });
-    form.style.display = "none";
-    thankYou.style.display = "block";
-
+        Promise.all(
+            sendToEmails.map(email =>
+                fetch(`https://formsubmit.co/ajax/${email}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: JSON.stringify({
+                        _subject: post.feedbackquestions[0].heading,
+                        message: message
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(`Feedback sent to ${email}`);
+                })
+                .catch(error => {
+                    alert(`❌ Error sending feedback to ${email}`);
+                })
+            )
+        ).then(() => {
+            form.style.display = "none";
+            thankYou.style.display = "block";
+            localStorage.setItem(hotelKey, "true"); // ✅ Mark this postId as submitted
+        });
     });
 }
     }

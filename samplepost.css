@@ -293,7 +293,27 @@ header{
       transform: translateY(0);
     }
   }
-            
+
+  .single-post-back-button a{
+    text-decoration: none;
+    color: white;
+  }
+   .single-post-back-button {
+    border: 1px solid yellowgreen;
+    background-color: green;
+    padding: 5px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 400;
+    margin: 20px;
+   }         
+   .single-post-back-button:hover{
+    background-color: rgb(10, 209, 10);
+   }
+   .single-post-back-button a:hover{
+    color: #1a1a1a;
+   }
 
 /* single post end */
 
@@ -324,6 +344,9 @@ header{
 
 /* whatsapp logo end */
 /* Feedback Heading */
+.single-post-feedback{
+  margin: 10px;
+}
 .single-post-feedback-head {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.2rem;
@@ -612,12 +635,16 @@ footer{
     }
     .single-post-content {
         margin-top: 30px 20px 10px 20px;
+        font-size: 15px;
     }
     .single-post {
         padding: 20px 10px;
     }
     .single-post-head {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    .single-post-back-button{
+        font-size: 1rem;
     }
     .slider-container img {
         width: 100%;
@@ -627,27 +654,77 @@ footer{
         padding: 20px;
     }
 
-    .slider-container img {
-        min-width: 270px;
-        height: 250px;
-        margin: 7px;
-    }
-
-    .side-btn {
-        width: 30px;
-        height: 30px;
-    }
-
-    .side-btn img {
-        width: 15px;
-        height: 15px;
-    }
-    #whatsapp-icons{
-        font-size: 85px;
+  .slider-container img {
+    min-width: 270px;
+    height: 250px;
+    margin: 7px;
+  }
+  .side-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .side-btn img {
+    width: 15px;
+    height: 15px;
+  }
+  .single-post-content h2 {
+    font-size: 1.2rem;
+  }
+  .single-post-content-ul {
+    font-size: 16px;
+  }
+  .single-post-content-ul li {
+    font-size: 14px;
+  }
+  .single-post-content-inside-ul li{
+    font-size: 14px;
+  }
+  .single-post-map iframe {
+    width: 93%;
+    height: 300px;
+  }
+  .single-post-content-booking h2 {
+    font-size: 1.3rem;
+  }
+  .single-post-content-booking ul {
+    list-style: none;
+    font-size: 16px;
+  }
+  .single-post-content-booking li {
+    font-size: 14px;
+  }
+  .single-post-content-booking button a {
+    font-size: 12px;
+  }
+  #whatsapp-icons{
+    font-size: 70px;
         
-    }
+  }
+  .single-post-feedback-head {
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+  .feedback-question label {
+    font-size: 0.8rem;
+  }
+  .star-rating {
+    justify-content: center;
+  }
+  .star-rating input[type="radio"] {
+    width: 25px;
+    height: 25px;
+  }
+  .star-rating label {
+    font-size: 23px;
+  }
+  .submit-feedback-btn {
+    padding: 10px 23px;
+    font-size: 0.8rem;
+  }
+  .thank-you-message {
+    font-size: 0.8rem;
+  }
 }
-
 /* tab mode */
 @media  (min-width:651px) and (max-width:1100px) {
     .menu-bar-opentag{
